@@ -108,6 +108,16 @@ class UserResource extends Resource {
   static get nameString () {
     return 'User'
   }
+
+  // Enhance entity class
+  static entityClass (ResourceEntity) {
+    return class UserResourceEntity extends ResourceEntity {
+      get fullName () {
+        let { firstName, lastName } = this
+        return [ firstName, lastName ].filter(Boolean).join(' ')
+      }
+    }
+  }
 }
 
 const db = theDb({
@@ -195,7 +205,7 @@ const theDb = require('the-db')
 API Guide
 -----
 
-+ [the-db@1.0.0](./doc/api/api.md)
++ [the-db@1.0.1](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
   + [TheDb](./doc/api/api.md#the-db-class)
 
