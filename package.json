@@ -1,6 +1,6 @@
 {
   "name": "the-db",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "DB for the-framework",
   "main": "shim",
   "scripts": {
