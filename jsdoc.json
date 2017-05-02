@@ -10,7 +10,88 @@
       "constructor": {
         "name": "TheDb",
         "description": "",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "config",
+            "type": "Object",
+            "description": "",
+            "default": "",
+            "optional": "",
+            "nullable": ""
+          },
+          {
+            "name": "config.env",
+            "type": "Object",
+            "description": "Env variables. Upper case keys will be converted lower key. `{DIALECT: 'mysql'}` -> `{dialect: 'mysql'}`",
+            "default": "",
+            "optional": "",
+            "nullable": ""
+          },
+          {
+            "name": "config.env.dialect",
+            "type": "string",
+            "description": "Database dialect. \"mysql\", \"json\", \"memory\", \"localstorage\", or \"sqlite\"",
+            "default": "'memory'",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.env.storage",
+            "type": "string",
+            "description": "Storage file name for \"sqlite\" or \"json\" dialect",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.env.database",
+            "type": "string",
+            "description": "Name of database schema",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.env.username",
+            "type": "string",
+            "description": "Database username",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.env.password",
+            "type": "string",
+            "description": "Database password",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.env.host",
+            "type": "string",
+            "description": "Database password",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.env.port",
+            "type": "string",
+            "description": "Database password",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.resources",
+            "type": "Object",
+            "description": "Resource classes",
+            "default": "",
+            "optional": "",
+            "nullable": ""
+          }
+        ],
         "examples": []
       }
     }
@@ -36,6 +117,14 @@
         "type": "TheDb",
         "description": ""
       }
+    },
+    {
+      "name": "driverFromEnv",
+      "access": "",
+      "virtual": false,
+      "description": "Create driver from env",
+      "parameters": [],
+      "examples": []
     }
   ]
 }
