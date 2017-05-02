@@ -32,10 +32,10 @@
     "clay-driver-json": "^3.0.1",
     "clay-driver-localstorage": "^2.0.1",
     "clay-driver-memory": "^4.0.1",
-    "clay-driver-mysql": "^1.0.3",
+    "clay-driver-mysql": "^*",
     "clay-driver-sqlite": "^3.0.2",
     "clay-lump": "^4.1.1",
-    "clay-resource": "^3.0.6",
+    "clay-resource": "^3.1.6",
     "clay-resource-name": "^4.0.1"
   },
   "devDependencies": {
@@ -45,7 +45,7 @@
     "the-script-release": "^1.0.6",
     "the-script-share": "^1.0.5",
     "the-script-update": "^1.0.0",
-    "the-templates": "^1.0.7"
+    "the-templates": "^1.0.10"
   },
   "engines": {
     "node": ">=6",
