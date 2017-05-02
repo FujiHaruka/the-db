@@ -2,7 +2,7 @@
   "name": "the-db",
   "version": "1.0.4",
   "description": "DB for the-framework",
-  "main": "shim",
+  "main": "lib",
   "scripts": {
     "build": "the-script-build",
     "doc": "the-script-jsdoc",
