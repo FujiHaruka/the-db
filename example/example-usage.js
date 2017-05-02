@@ -32,6 +32,16 @@ class UserResource extends Resource {
   static get nameString () {
     return 'User'
   }
+
+  // Enhance entity class
+  static entityClass (ResourceEntity) {
+    return class UserResourceEntity extends ResourceEntity {
+      get fullName () {
+        let { firstName, lastName } = this
+        return [ firstName, lastName ].filter(Boolean).join(' ')
+      }
+    }
+  }
 }
 
 const db = theDb({
