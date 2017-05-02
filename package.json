@@ -1,0 +1,54 @@
+{
+  "name": "the-db",
+  "version": "1.0.0",
+  "description": "DB for the-framework",
+  "main": "shim",
+  "scripts": {
+    "build": "the-script-build",
+    "doc": "the-script-jsdoc",
+    "prepare": "the-script-build && the-script-jsdoc",
+    "release": "the-script-release -y",
+    "share": "the-script-share",
+    "test": "mocha",
+    "update": "the-script-update",
+    "watch": "the-script-build -w"
+  },
+  "repository": "the-labo/the-db",
+  "keywords": [
+    "the"
+  ],
+  "author": {
+    "name": "Taka Okunishi",
+    "email": "okunishinishi@gmail.com",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/the-labo/the-db/issues"
+  },
+  "homepage": "https://github.com/the-labo/the-db#readme",
+  "dependencies": {
+    "clay-constants": "^3.0.1",
+    "clay-driver-json": "^3.0.1",
+    "clay-driver-localstorage": "^2.0.1",
+    "clay-driver-memory": "^4.0.1",
+    "clay-driver-mysql": "^1.0.3",
+    "clay-driver-sqlite": "^3.0.2",
+    "clay-lump": "^4.1.1",
+    "clay-resource": "^3.0.6",
+    "clay-resource-name": "^4.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.3.0",
+    "the-script-build": "^1.3.4",
+    "the-script-jsdoc": "^1.0.3",
+    "the-script-release": "^1.0.6",
+    "the-script-share": "^1.0.5",
+    "the-script-update": "^1.0.0",
+    "the-templates": "^1.0.7"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=4"
+  }
+}
