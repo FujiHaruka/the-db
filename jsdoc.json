@@ -93,7 +93,34 @@
           }
         ],
         "examples": []
-      }
+      },
+      "functions": [
+        {
+          "name": "registerResourceFromClass",
+          "access": "",
+          "virtual": false,
+          "description": "Register resource form Resource Class",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "strong",
+              "description": "Resource name to register with",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "ResourceClass",
+              "type": "function",
+              "description": "Resource class to register",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": []
+        }
+      ]
     }
   ],
   "functions": [
