@@ -103,7 +103,7 @@
           "parameters": [
             {
               "name": "resourceClasses",
-              "type": "",
+              "type": "Array.<function()>",
               "description": "",
               "default": "",
               "optional": "",
