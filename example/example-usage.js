@@ -49,16 +49,16 @@ const db = theDb({
     dialect: 'sqlite', // Uses "clay-driver-sqlite" package
     storage: 'var/my-app.db' // File path to save
   }
-}).load({
-  userResource: UserResource
-})
+}).load([
+  UserResource
+])
 
 // Using defined database
 
 async function tryExample () {
   // Use the connected resource
-  const { userResource } = db.resources
-  let user = await userResource.create({ username: 'Black Fire', password: 'Super Cool' })
+  const { User } = db.resources
+  let user = await User.create({ username: 'Black Fire', password: 'Super Cool' })
   /* ... */
 }
 
