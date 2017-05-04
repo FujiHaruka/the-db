@@ -123,15 +123,15 @@
           "description": "Register resource form Resource Class",
           "parameters": [
             {
-              "name": "instanceName",
+              "name": "resourceName",
               "type": "string",
-              "description": "Key to access resource instance",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
             },
             {
-              "name": "Clazz",
+              "name": "ResourceClass",
               "type": "function",
               "description": "Resource class to register",
               "default": "",

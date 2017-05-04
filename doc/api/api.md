@@ -1,4 +1,4 @@
-# the-db@2.0.0
+# the-db@2.0.1
 
 DB for the-framework
 
@@ -6,7 +6,8 @@ DB for the-framework
   + [create(args)](#the-db-function-create)
 + [`TheDb`](#the-db-classes) Class
   + [new TheDb(config)](#the-db-classes-the-db-constructor)
-  + [db.registerResourceFromClass(resourceName, ResourceClass)](#the-db-classes-the-db-registerResourceFromClass)
+  + [db.load(resourceClasses)](#the-db-classes-the-db-load)
+  + [db.loadResourceFromClass(instanceName, Clazz)](#the-db-classes-the-db-loadResourceFromClass)
 
 ## Functions
 
@@ -51,16 +52,27 @@ Constructor of TheDb class
 | config.resources | Object | Resource classes |
 
 
-<a class='md-heading-link' name="the-db-classes-the-db-registerResourceFromClass" ></a>
+<a class='md-heading-link' name="the-db-classes-the-db-load" ></a>
 
-### db.registerResourceFromClass(resourceName, ResourceClass)
+### db.load(resourceClasses) -> `TheDb`
+
+Load resource classes
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| resourceClasses |  |  |
+
+
+<a class='md-heading-link' name="the-db-classes-the-db-loadResourceFromClass" ></a>
+
+### db.loadResourceFromClass(instanceName, Clazz)
 
 Register resource form Resource Class
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| resourceName | strong | Resource name to register with |
-| ResourceClass | function | Resource class to register |
+| instanceName | string | Key to access resource instance |
+| Clazz | function | Resource class to register |
 
 
 

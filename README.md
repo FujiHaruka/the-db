@@ -125,16 +125,16 @@ const db = theDb({
     dialect: 'sqlite', // Uses "clay-driver-sqlite" package
     storage: 'var/my-app.db' // File path to save
   }
-}).load({
-  userResource: UserResource
-})
+}).load([
+  UserResource
+])
 
 // Using defined database
 
 async function tryExample () {
   // Use the connected resource
-  const { userResource } = db.resources
-  let user = await userResource.create({ username: 'Black Fire', password: 'Super Cool' })
+  const { User } = db.resources
+  let user = await User.create({ username: 'Black Fire', password: 'Super Cool' })
   /* ... */
 }
 
@@ -204,7 +204,7 @@ const theDb = require('the-db')
 API Guide
 -----
 
-+ [the-db@2.0.0](./doc/api/api.md)
++ [the-db@2.0.1](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
   + [TheDb](./doc/api/api.md#the-db-class)
 
