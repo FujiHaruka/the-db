@@ -96,21 +96,42 @@
       },
       "functions": [
         {
-          "name": "registerResourceFromClass",
+          "name": "load",
+          "access": "",
+          "virtual": false,
+          "description": "Load resource classes",
+          "parameters": [
+            {
+              "name": "resourceClasses",
+              "type": "",
+              "description": "",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "TheDb",
+            "description": ""
+          }
+        },
+        {
+          "name": "loadResourceFromClass",
           "access": "",
           "virtual": false,
           "description": "Register resource form Resource Class",
           "parameters": [
             {
-              "name": "resourceName",
-              "type": "strong",
-              "description": "Resource name to register with",
+              "name": "instanceName",
+              "type": "string",
+              "description": "Key to access resource instance",
               "default": "",
               "optional": "",
               "nullable": ""
             },
             {
-              "name": "ResourceClass",
+              "name": "Clazz",
               "type": "function",
               "description": "Resource class to register",
               "default": "",
