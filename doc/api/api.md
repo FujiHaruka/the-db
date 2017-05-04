@@ -6,6 +6,7 @@ DB for the-framework
   + [create(args)](#the-db-function-create)
 + [`TheDb`](#the-db-classes) Class
   + [new TheDb(config)](#the-db-classes-the-db-constructor)
+  + [db.registerResourceFromClass(resourceName, ResourceClass)](#the-db-classes-the-db-registerResourceFromClass)
 
 ## Functions
 
@@ -48,6 +49,18 @@ Constructor of TheDb class
 | config.env.host | string | Database password |
 | config.env.port | string | Database password |
 | config.resources | Object | Resource classes |
+
+
+<a class='md-heading-link' name="the-db-classes-the-db-registerResourceFromClass" ></a>
+
+### db.registerResourceFromClass(resourceName, ResourceClass)
+
+Register resource form Resource Class
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| resourceName | strong | Resource name to register with |
+| ResourceClass | function | Resource class to register |
 
 
 

@@ -21,33 +21,36 @@ describe('the-db', () => {
     let db = new TheDb({
       env: {
         dialect: 'memory'
-      },
-      resources: {
-        User: class UserResource extends ClayResource {
-          static inbound (attributes) {
-            const digest = (password) => password.slice(0, 1)
-            attributes.passwordHash = digest(attributes.password)
-            delete attributes.password
-            return attributes
-          }
+      }
+    }).load({
+      userResource: class UserResource extends ClayResource {
+        static inbound (attributes) {
+          const digest = (password) => password.slice(0, 1)
+          attributes.passwordHash = digest(attributes.password)
+          delete attributes.password
+          return attributes
+        }
 
-          static outbound (attributes) {
-            return attributes
-          }
+        static outbound (attributes) {
+          return attributes
+        }
 
-          static get policy () {
-            return {
-              username: { type: 'STRING', unique: true },
-              passwordHash: { type: 'STRING' }
-            }
+        static get policy () {
+          return {
+            username: { type: 'STRING', unique: true },
+            passwordHash: { type: 'STRING' }
           }
+        }
+
+        static get nameString () {
+          return 'User'
         }
       }
     })
 
-    let { User } = db.resources
+    let { userResource } = db.resources
 
-    let user = yield User.create({ username: 'foo', password: 'hogehoge' })
+    let user = yield userResource.create({ username: 'foo', password: 'hogehoge' })
     equal(user.username, 'foo')
     equal(user.passwordHash, 'h')
 
@@ -55,7 +58,7 @@ describe('the-db', () => {
     ok(user.$$at)
     let thrown
     try {
-      yield User.create({ username: 'foo', password: 'hogehoge2' })
+      yield userResource.create({ username: 'foo', password: 'hogehoge2' })
     } catch (e) {
       thrown = e
     }

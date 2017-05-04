@@ -11,12 +11,12 @@ class UserResource extends Resource {
   static inbound (attributes) {
     const digest = (password) => { /* ... */ }
     attributes.passwordHash = digest(attributes.password)
-    delete attributes.password
     return attributes
   }
 
   // Convert entity attributes on outbound
   static outbound (attributes) {
+    delete attributes.password
     return attributes
   }
 
@@ -48,17 +48,16 @@ const db = theDb({
   env: {
     dialect: 'sqlite', // Uses "clay-driver-sqlite" package
     storage: 'var/my-app.db' // File path to save
-  },
-  resources: {
-    User: UserResource
   }
+}).load({
+  userResource: UserResource
 })
 
 // Using defined database
 
 async function tryExample () {
   // Use the connected resource
-  const userResource = db.resource('User')
+  const { userResource } = db.resources
   let user = await userResource.create({ username: 'Black Fire', password: 'Super Cool' })
   /* ... */
 }
