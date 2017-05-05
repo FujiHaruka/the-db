@@ -105,10 +105,6 @@ class UserResource extends Resource {
     }
   }
 
-  static get nameString () {
-    return 'User'
-  }
-
   // Enhance entity class
   static entityClass (ResourceEntity) {
     return class UserResourceEntity extends ResourceEntity {
@@ -125,9 +121,9 @@ const db = theDb({
     dialect: 'sqlite', // Uses "clay-driver-sqlite" package
     storage: 'var/my-app.db' // File path to save
   }
-}).load([
-  UserResource
-])
+})
+
+db.load(UserResource, 'User')
 
 // Using defined database
 
@@ -160,8 +156,7 @@ const theDb = require('the-db')
     env: {
       dialect: 'sqlite', // Uses "clay-driver-sqlite" package
       storage: 'var/my-app.db' // File path to save
-    },
-    resources: { /* ... */ }
+    }
   })
 }
 
@@ -171,8 +166,7 @@ const theDb = require('the-db')
     env: {
       dialect: 'json', // Uses "clay-driver-json" package
       storage: 'var/my-app.json' // File path to save
-    },
-    resources: { /* ... */ }
+    }
   })
 }
 
@@ -188,10 +182,6 @@ const theDb = require('the-db')
   })
 }
 
-
-
-
-
 ```
 
 
@@ -204,7 +194,7 @@ const theDb = require('the-db')
 API Guide
 -----
 
-+ [the-db@2.0.3](./doc/api/api.md)
++ [the-db@3.0.0](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
   + [TheDb](./doc/api/api.md#the-db-class)
 

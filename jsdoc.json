@@ -99,41 +99,20 @@
           "name": "load",
           "access": "",
           "virtual": false,
-          "description": "Load resource classes",
-          "parameters": [
-            {
-              "name": "resourceClasses",
-              "type": "Array.<function()>",
-              "description": "",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "TheDb",
-            "description": ""
-          }
-        },
-        {
-          "name": "loadResourceFromClass",
-          "access": "",
-          "virtual": false,
           "description": "Register resource form Resource Class",
           "parameters": [
             {
-              "name": "resourceName",
-              "type": "string",
-              "description": "Name of resource",
+              "name": "ResourceClass",
+              "type": "function",
+              "description": "Resource class to register",
               "default": "",
               "optional": "",
               "nullable": ""
             },
             {
-              "name": "ResourceClass",
-              "type": "function",
-              "description": "Resource class to register",
+              "name": "resourceName",
+              "type": "string",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
