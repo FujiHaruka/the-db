@@ -29,10 +29,6 @@ class UserResource extends Resource {
     }
   }
 
-  static get nameString () {
-    return 'User'
-  }
-
   // Enhance entity class
   static entityClass (ResourceEntity) {
     return class UserResourceEntity extends ResourceEntity {
@@ -49,9 +45,9 @@ const db = theDb({
     dialect: 'sqlite', // Uses "clay-driver-sqlite" package
     storage: 'var/my-app.db' // File path to save
   }
-}).load([
-  UserResource
-])
+})
+
+db.load(UserResource, 'User')
 
 // Using defined database
 

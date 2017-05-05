@@ -204,7 +204,7 @@ const theDb = require('the-db')
 API Guide
 -----
 
-+ [the-db@2.0.2](./doc/api/api.md)
++ [the-db@2.0.3](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
   + [TheDb](./doc/api/api.md#the-db-class)
 

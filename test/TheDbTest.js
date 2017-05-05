@@ -22,31 +22,28 @@ describe('the-db', () => {
       env: {
         dialect: 'memory'
       }
-    }).load([
-      class UserResource extends ClayResource {
-        static inbound (attributes) {
-          const digest = (password) => password.slice(0, 1)
-          attributes.passwordHash = digest(attributes.password)
-          delete attributes.password
-          return attributes
-        }
+    })
+    class UserResource extends ClayResource {
+      static inbound (attributes) {
+        const digest = (password) => password.slice(0, 1)
+        attributes.passwordHash = digest(attributes.password)
+        delete attributes.password
+        return attributes
+      }
 
-        static outbound (attributes) {
-          return attributes
-        }
+      static outbound (attributes) {
+        return attributes
+      }
 
-        static get policy () {
-          return {
-            username: { type: 'STRING', unique: true },
-            passwordHash: { type: 'STRING' }
-          }
-        }
-
-        static get nameString () {
-          return 'User'
+      static get policy () {
+        return {
+          username: { type: 'STRING', unique: true },
+          passwordHash: { type: 'STRING' }
         }
       }
-    ])
+    }
+
+    db.load(UserResource, 'User')
 
     let { User } = db.resources
 

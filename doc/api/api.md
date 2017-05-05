@@ -1,4 +1,4 @@
-# the-db@2.0.2
+# the-db@2.0.3
 
 DB for the-framework
 
@@ -60,7 +60,7 @@ Load resource classes
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| resourceClasses |  |  |
+| resourceClasses | Array.&lt;function()&gt; |  |
 
 
 <a class='md-heading-link' name="the-db-classes-the-db-loadResourceFromClass" ></a>
