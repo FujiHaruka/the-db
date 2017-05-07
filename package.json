@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/the-labo/the-db#readme",
   "dependencies": {
+    "asobj": "^1.5.0",
     "clay-constants": "^3.0.1",
     "clay-driver-json": "^3.0.1",
     "clay-driver-localstorage": "^2.0.1",

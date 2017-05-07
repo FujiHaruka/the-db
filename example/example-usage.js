@@ -41,10 +41,8 @@ class UserResource extends Resource {
 }
 
 const db = theDb({
-  env: {
-    dialect: 'sqlite', // Uses "clay-driver-sqlite" package
-    storage: 'var/my-app.db' // File path to save
-  }
+  dialect: 'sqlite', // Uses "clay-driver-sqlite" package
+  storage: 'var/my-app.db' // File path to save
 })
 
 db.load(UserResource, 'User')
