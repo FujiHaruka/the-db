@@ -20,15 +20,15 @@
             "nullable": ""
           },
           {
-            "name": "config.env",
-            "type": "Object",
-            "description": "Env variables. Upper case keys will be converted lower key. `{DIALECT: 'mysql'}` -> `{dialect: 'mysql'}`",
-            "default": "",
-            "optional": "",
+            "name": "config.name",
+            "type": "string",
+            "description": "Name of clay-lump",
+            "default": "uuid.v4()",
+            "optional": true,
             "nullable": ""
           },
           {
-            "name": "config.env.dialect",
+            "name": "config.dialect",
             "type": "string",
             "description": "Database dialect. \"mysql\", \"json\", \"memory\", \"localstorage\", or \"sqlite\"",
             "default": "'memory'",
@@ -36,7 +36,7 @@
             "nullable": ""
           },
           {
-            "name": "config.env.storage",
+            "name": "config.storage",
             "type": "string",
             "description": "Storage file name for \"sqlite\" or \"json\" dialect",
             "default": "",
@@ -44,7 +44,7 @@
             "nullable": ""
           },
           {
-            "name": "config.env.database",
+            "name": "config.database",
             "type": "string",
             "description": "Name of database schema",
             "default": "",
@@ -52,7 +52,7 @@
             "nullable": ""
           },
           {
-            "name": "config.env.username",
+            "name": "config.username",
             "type": "string",
             "description": "Database username",
             "default": "",
@@ -60,7 +60,7 @@
             "nullable": ""
           },
           {
-            "name": "config.env.password",
+            "name": "config.password",
             "type": "string",
             "description": "Database password",
             "default": "",
@@ -68,7 +68,7 @@
             "nullable": ""
           },
           {
-            "name": "config.env.host",
+            "name": "config.host",
             "type": "string",
             "description": "Database password",
             "default": "",
@@ -76,19 +76,11 @@
             "nullable": ""
           },
           {
-            "name": "config.env.port",
+            "name": "config.port",
             "type": "string",
             "description": "Database password",
             "default": "",
             "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.resources",
-            "type": "Object",
-            "description": "Resource classes",
-            "default": "",
-            "optional": "",
             "nullable": ""
           }
         ],

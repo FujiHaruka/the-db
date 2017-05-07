@@ -117,10 +117,8 @@ class UserResource extends Resource {
 }
 
 const db = theDb({
-  env: {
-    dialect: 'sqlite', // Uses "clay-driver-sqlite" package
-    storage: 'var/my-app.db' // File path to save
-  }
+  dialect: 'sqlite', // Uses "clay-driver-sqlite" package
+  storage: 'var/my-app.db' // File path to save
 })
 
 db.load(UserResource, 'User')
@@ -153,32 +151,26 @@ const theDb = require('the-db')
 // Using sqlite
 {
   const sqlite = theDb({
-    env: {
-      dialect: 'sqlite', // Uses "clay-driver-sqlite" package
-      storage: 'var/my-app.db' // File path to save
-    }
+    dialect: 'sqlite', // Uses "clay-driver-sqlite" package
+    storage: 'var/my-app.db' // File path to save
   })
 }
 
 // Using json
 {
   const json = theDb({
-    env: {
-      dialect: 'json', // Uses "clay-driver-json" package
-      storage: 'var/my-app.json' // File path to save
-    }
+    dialect: 'json', // Uses "clay-driver-json" package
+    storage: 'var/my-app.json' // File path to save
   })
 }
 
 // Using mysql
 {
   const mysql = theDb({
-    env: {
-      dialect: 'mysql', // Uses "clay-driver-mysql" package
-      database: 'my-app',
-      username: 'user01',
-      password: 'xxxxxxxxxxx'
-    }
+    dialect: 'mysql', // Uses "clay-driver-mysql" package
+    database: 'my-app',
+    username: 'user01',
+    password: 'xxxxxxxxxxx'
   })
 }
 
@@ -194,7 +186,7 @@ const theDb = require('the-db')
 API Guide
 -----
 
-+ [the-db@3.0.0](./doc/api/api.md)
++ [the-db@3.0.1](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
   + [TheDb](./doc/api/api.md#the-db-class)
 

@@ -1,4 +1,4 @@
-# the-db@3.0.0
+# the-db@3.0.1
 
 DB for the-framework
 
@@ -6,8 +6,7 @@ DB for the-framework
   + [create(args)](#the-db-function-create)
 + [`TheDb`](#the-db-classes) Class
   + [new TheDb(config)](#the-db-classes-the-db-constructor)
-  + [db.load(resourceClasses)](#the-db-classes-the-db-load)
-  + [db.loadResourceFromClass(resourceName, ResourceClass)](#the-db-classes-the-db-loadResourceFromClass)
+  + [db.load(ResourceClass, resourceName)](#the-db-classes-the-db-load)
 
 ## Functions
 
@@ -54,25 +53,14 @@ Constructor of TheDb class
 
 <a class='md-heading-link' name="the-db-classes-the-db-load" ></a>
 
-### db.load(resourceClasses) -> `TheDb`
-
-Load resource classes
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| resourceClasses | Array.&lt;function()&gt; |  |
-
-
-<a class='md-heading-link' name="the-db-classes-the-db-loadResourceFromClass" ></a>
-
-### db.loadResourceFromClass(resourceName, ResourceClass)
+### db.load(ResourceClass, resourceName)
 
 Register resource form Resource Class
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| resourceName | string | Name of resource |
 | ResourceClass | function | Resource class to register |
+| resourceName | string | Name of resource |
 
 
 
