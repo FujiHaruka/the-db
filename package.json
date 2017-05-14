@@ -36,7 +36,7 @@
     "clay-driver-mysql": "^*",
     "clay-driver-sqlite": "^3.0.2",
     "clay-lump": "^4.2.1",
-    "clay-resource": "^3.1.13",
+    "clay-resource": "^3.1.14",
     "clay-resource-name": "^4.0.1"
   },
   "devDependencies": {
