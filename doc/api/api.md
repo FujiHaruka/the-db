@@ -8,6 +8,8 @@ DB for the-framework
   + [new TheDb(config)](#the-db-classes-the-db-constructor)
   + [db.load(ResourceClass, resourceName)](#the-db-classes-the-db-load)
   + [db.getResource(resourceName)](#the-db-classes-the-db-getResource)
+  + [db.load(ResourceClass, resourceName)](#the-db-classes-the-db-load)
+  + [db.getResource(resourceName)](#the-db-classes-the-db-getResource)
 
 ## Functions
 
@@ -49,6 +51,29 @@ Constructor of TheDb class
 | config.password | string | Database password |
 | config.host | string | Database password |
 | config.port | string | Database password |
+
+
+<a class='md-heading-link' name="the-db-classes-the-db-load" ></a>
+
+### db.load(ResourceClass, resourceName)
+
+Register resource form Resource Class
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| ResourceClass | function | Resource class to register |
+| resourceName | string | Name of resource |
+
+
+<a class='md-heading-link' name="the-db-classes-the-db-getResource" ></a>
+
+### db.getResource(resourceName) -> `ClayResource`
+
+Get a resource with name
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| resourceName | string | Name of the resource |
 
 
 <a class='md-heading-link' name="the-db-classes-the-db-load" ></a>
