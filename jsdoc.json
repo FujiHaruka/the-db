@@ -194,6 +194,27 @@
           }
         },
         {
+          "name": "hasResource",
+          "access": "",
+          "virtual": false,
+          "description": "Check if resource exists",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "boolean",
+            "description": ""
+          }
+        },
+        {
           "name": "load",
           "access": "",
           "virtual": false,
@@ -236,6 +257,27 @@
           "examples": [],
           "returns": {
             "type": "ClayResource",
+            "description": ""
+          }
+        },
+        {
+          "name": "hasResource",
+          "access": "",
+          "virtual": false,
+          "description": "Check if resource exists",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "boolean",
             "description": ""
           }
         }
@@ -375,6 +417,27 @@
           }
         },
         {
+          "name": "hasResource",
+          "access": "",
+          "virtual": false,
+          "description": "Check if resource exists",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "boolean",
+            "description": ""
+          }
+        },
+        {
           "name": "load",
           "access": "",
           "virtual": false,
@@ -417,6 +480,27 @@
           "examples": [],
           "returns": {
             "type": "ClayResource",
+            "description": ""
+          }
+        },
+        {
+          "name": "hasResource",
+          "access": "",
+          "virtual": false,
+          "description": "Check if resource exists",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "boolean",
             "description": ""
           }
         }

@@ -1,4 +1,4 @@
-# the-db@3.0.2
+# the-db@3.0.3
 
 DB for the-framework
 
@@ -8,8 +8,10 @@ DB for the-framework
   + [new TheDb(config)](#the-db-classes-the-db-constructor)
   + [db.load(ResourceClass, resourceName)](#the-db-classes-the-db-load)
   + [db.getResource(resourceName)](#the-db-classes-the-db-getResource)
+  + [db.hasResource(resourceName)](#the-db-classes-the-db-hasResource)
   + [db.load(ResourceClass, resourceName)](#the-db-classes-the-db-load)
   + [db.getResource(resourceName)](#the-db-classes-the-db-getResource)
+  + [db.hasResource(resourceName)](#the-db-classes-the-db-hasResource)
 
 ## Functions
 
@@ -76,6 +78,17 @@ Get a resource with name
 | resourceName | string | Name of the resource |
 
 
+<a class='md-heading-link' name="the-db-classes-the-db-hasResource" ></a>
+
+### db.hasResource(resourceName) -> `boolean`
+
+Check if resource exists
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| resourceName | string |  |
+
+
 <a class='md-heading-link' name="the-db-classes-the-db-load" ></a>
 
 ### db.load(ResourceClass, resourceName)
@@ -97,6 +110,17 @@ Get a resource with name
 | Param | Type | Description |
 | ----- | --- | -------- |
 | resourceName | string | Name of the resource |
+
+
+<a class='md-heading-link' name="the-db-classes-the-db-hasResource" ></a>
+
+### db.hasResource(resourceName) -> `boolean`
+
+Check if resource exists
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| resourceName | string |  |
 
 
 
