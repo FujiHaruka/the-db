@@ -1,4 +1,4 @@
-# the-db@3.0.1
+# the-db@3.0.2
 
 DB for the-framework
 
@@ -7,6 +7,7 @@ DB for the-framework
 + [`TheDb`](#the-db-classes) Class
   + [new TheDb(config)](#the-db-classes-the-db-constructor)
   + [db.load(ResourceClass, resourceName)](#the-db-classes-the-db-load)
+  + [db.getResource(resourceName)](#the-db-classes-the-db-getResource)
 
 ## Functions
 
@@ -40,15 +41,14 @@ Constructor of TheDb class
 | Param | Type | Description |
 | ----- | --- | -------- |
 | config | Object |  |
-| config.env | Object | Env variables. Upper case keys will be converted lower key. `{DIALECT: 'mysql'}` -> `{dialect: 'mysql'}` |
-| config.env.dialect | string | Database dialect. "mysql", "json", "memory", "localstorage", or "sqlite" |
-| config.env.storage | string | Storage file name for "sqlite" or "json" dialect |
-| config.env.database | string | Name of database schema |
-| config.env.username | string | Database username |
-| config.env.password | string | Database password |
-| config.env.host | string | Database password |
-| config.env.port | string | Database password |
-| config.resources | Object | Resource classes |
+| config.name | string | Name of clay-lump |
+| config.dialect | string | Database dialect. "mysql", "json", "memory", "localstorage", or "sqlite" |
+| config.storage | string | Storage file name for "sqlite" or "json" dialect |
+| config.database | string | Name of database schema |
+| config.username | string | Database username |
+| config.password | string | Database password |
+| config.host | string | Database password |
+| config.port | string | Database password |
 
 
 <a class='md-heading-link' name="the-db-classes-the-db-load" ></a>
@@ -61,6 +61,17 @@ Register resource form Resource Class
 | ----- | --- | -------- |
 | ResourceClass | function | Resource class to register |
 | resourceName | string | Name of resource |
+
+
+<a class='md-heading-link' name="the-db-classes-the-db-getResource" ></a>
+
+### db.getResource(resourceName) -> `ClayResource`
+
+Get a resource with name
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| resourceName | string | Name of the resource |
 
 
 

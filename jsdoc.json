@@ -1,4 +1,64 @@
 {
+  "functions": [
+    {
+      "name": "create",
+      "access": "",
+      "virtual": false,
+      "description": "Create a TheDb instance",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "*",
+          "description": "",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "TheDb",
+        "description": ""
+      }
+    },
+    {
+      "name": "driverFromEnv",
+      "access": "",
+      "virtual": false,
+      "description": "Create driver from env",
+      "parameters": [],
+      "examples": []
+    },
+    {
+      "name": "create",
+      "access": "",
+      "virtual": false,
+      "description": "Create a TheDb instance",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "*",
+          "description": "",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "TheDb",
+        "description": ""
+      }
+    },
+    {
+      "name": "driverFromEnv",
+      "access": "",
+      "virtual": false,
+      "description": "Create driver from env",
+      "parameters": [],
+      "examples": []
+    }
+  ],
   "classes": [
     {
       "name": "TheDb",
@@ -111,39 +171,256 @@
             }
           ],
           "examples": []
+        },
+        {
+          "name": "getResource",
+          "access": "",
+          "virtual": false,
+          "description": "Get a resource with name",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "Name of the resource",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "ClayResource",
+            "description": ""
+          }
+        },
+        {
+          "name": "load",
+          "access": "",
+          "virtual": false,
+          "description": "Register resource form Resource Class",
+          "parameters": [
+            {
+              "name": "ResourceClass",
+              "type": "function",
+              "description": "Resource class to register",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "Name of resource",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": []
+        },
+        {
+          "name": "getResource",
+          "access": "",
+          "virtual": false,
+          "description": "Get a resource with name",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "Name of the resource",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "ClayResource",
+            "description": ""
+          }
         }
       ]
-    }
-  ],
-  "functions": [
-    {
-      "name": "create",
-      "access": "",
-      "virtual": false,
-      "description": "Create a TheDb instance",
-      "parameters": [
-        {
-          "name": "args",
-          "type": "*",
-          "description": "",
-          "default": "",
-          "optional": "",
-          "nullable": ""
-        }
-      ],
-      "examples": [],
-      "returns": {
-        "type": "TheDb",
-        "description": ""
-      }
     },
     {
-      "name": "driverFromEnv",
+      "name": "TheDb",
+      "description": "",
+      "extends": [],
       "access": "",
       "virtual": false,
-      "description": "Create driver from env",
-      "parameters": [],
-      "examples": []
+      "fires": "",
+      "constructor": {
+        "name": "TheDb",
+        "description": "",
+        "parameters": [
+          {
+            "name": "config",
+            "type": "Object",
+            "description": "",
+            "default": "",
+            "optional": "",
+            "nullable": ""
+          },
+          {
+            "name": "config.name",
+            "type": "string",
+            "description": "Name of clay-lump",
+            "default": "uuid.v4()",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.dialect",
+            "type": "string",
+            "description": "Database dialect. \"mysql\", \"json\", \"memory\", \"localstorage\", or \"sqlite\"",
+            "default": "'memory'",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.storage",
+            "type": "string",
+            "description": "Storage file name for \"sqlite\" or \"json\" dialect",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.database",
+            "type": "string",
+            "description": "Name of database schema",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.username",
+            "type": "string",
+            "description": "Database username",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.password",
+            "type": "string",
+            "description": "Database password",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.host",
+            "type": "string",
+            "description": "Database password",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "config.port",
+            "type": "string",
+            "description": "Database password",
+            "default": "",
+            "optional": true,
+            "nullable": ""
+          }
+        ],
+        "examples": []
+      },
+      "functions": [
+        {
+          "name": "load",
+          "access": "",
+          "virtual": false,
+          "description": "Register resource form Resource Class",
+          "parameters": [
+            {
+              "name": "ResourceClass",
+              "type": "function",
+              "description": "Resource class to register",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "Name of resource",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": []
+        },
+        {
+          "name": "getResource",
+          "access": "",
+          "virtual": false,
+          "description": "Get a resource with name",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "Name of the resource",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "ClayResource",
+            "description": ""
+          }
+        },
+        {
+          "name": "load",
+          "access": "",
+          "virtual": false,
+          "description": "Register resource form Resource Class",
+          "parameters": [
+            {
+              "name": "ResourceClass",
+              "type": "function",
+              "description": "Resource class to register",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "Name of resource",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": []
+        },
+        {
+          "name": "getResource",
+          "access": "",
+          "virtual": false,
+          "description": "Get a resource with name",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "Name of the resource",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "ClayResource",
+            "description": ""
+          }
+        }
+      ]
     }
   ]
 }
