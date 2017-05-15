@@ -8,7 +8,7 @@ module.exports = api({
   signature: signature(
     require('../../jsdoc.json'),
     {
-      classNames: [ 'TheDb' ],
+      classNames: [ 'TheDB' ],
       functionNames: [ 'create' ]
     }
   )

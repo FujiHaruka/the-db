@@ -24,7 +24,7 @@ module.exports = readmeMdBud({
       require('./jsdoc.json'),
       {
         classNames: [
-          'TheDb'
+          'TheDB'
         ],
         functionNames: [
           'create'

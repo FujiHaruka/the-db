@@ -188,7 +188,7 @@ API Guide
 
 + [the-db@3.0.5](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
-  + [TheDb](./doc/api/api.md#the-db-class)
+  + [TheDB](./doc/api/api.md#the-d-b-class)
 
 
 <!-- Section from "doc/guides/10.API Guide.md.hbs" End -->
