@@ -1,10 +1,10 @@
 'use strict'
 
-const theDb = require('the-db')
+const TheDB = require('the-db')
 
 // Using sqlite
 {
-  const sqlite = theDb({
+  const sqlite = TheDB({
     dialect: 'sqlite', // Uses "clay-driver-sqlite" package
     storage: 'var/my-app.db' // File path to save
   })
@@ -12,7 +12,7 @@ const theDb = require('the-db')
 
 // Using json
 {
-  const json = theDb({
+  const json = TheDB({
     dialect: 'json', // Uses "clay-driver-json" package
     storage: 'var/my-app.json' // File path to save
   })
@@ -20,7 +20,7 @@ const theDb = require('the-db')
 
 // Using mysql
 {
-  const mysql = theDb({
+  const mysql = TheDB({
     dialect: 'mysql', // Uses "clay-driver-mysql" package
     database: 'my-app',
     username: 'user01',
