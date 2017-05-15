@@ -1,10 +1,10 @@
 /**
- * Test for TheDb.
+ * Test for TheDB.
  * Runs with mocha.
  */
 'use strict'
 
-const TheDb = require('../lib/TheDb')
+const TheDB = require('../lib/TheDB')
 const { ok, equal } = require('assert')
 const co = require('co')
 const { ClayResource } = require('clay-resource')
@@ -18,7 +18,7 @@ describe('the-db', () => {
 
   it('The db', () => co(function * () {
 
-    let db = new TheDb({
+    let db = new TheDB({
       env: {
         dialect: 'memory'
       }
