@@ -1,25 +1,25 @@
-# the-db@3.0.4
+# the-db@3.0.7
 
 DB for the-framework
 
 + Functions
   + [create(args)](#the-db-function-create)
-+ [`TheDb`](#the-db-classes) Class
-  + [new TheDb(config)](#the-db-classes-the-db-constructor)
-  + [db.load(ResourceClass, resourceName)](#the-db-classes-the-db-load)
-  + [db.getResource(resourceName)](#the-db-classes-the-db-getResource)
-  + [db.hasResource(resourceName)](#the-db-classes-the-db-hasResource)
-  + [db.load(ResourceClass, resourceName)](#the-db-classes-the-db-load)
-  + [db.getResource(resourceName)](#the-db-classes-the-db-getResource)
-  + [db.hasResource(resourceName)](#the-db-classes-the-db-hasResource)
++ [`TheDB`](#the-db-classes) Class
+  + [new TheDB(config)](#the-db-classes-the-d-b-constructor)
+  + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
+  + [b.getResource(resourceName)](#the-db-classes-the-d-b-getResource)
+  + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
+  + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
+  + [b.getResource(resourceName)](#the-db-classes-the-d-b-getResource)
+  + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
 
 ## Functions
 
 <a class='md-heading-link' name="the-db-function-create" ></a>
 
-### create(args) -> `TheDb`
+### create(args) -> `TheDB`
 
-Create a TheDb instance
+Create a TheDB instance
 
 | Param | Type | Description |
 | ----- | --- | -------- |
@@ -29,18 +29,18 @@ Create a TheDb instance
 
 <a class='md-heading-link' name="the-db-classes"></a>
 
-## `TheDb` Class
+## `TheDB` Class
 
 
 
 
 
 
-<a class='md-heading-link' name="the-db-classes-the-db-constructor" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-constructor" ></a>
 
-### new TheDb(config)
+### new TheDB(config)
 
-Constructor of TheDb class
+Constructor of TheDB class
 
 | Param | Type | Description |
 | ----- | --- | -------- |
@@ -55,9 +55,9 @@ Constructor of TheDb class
 | config.port | string | Database password |
 
 
-<a class='md-heading-link' name="the-db-classes-the-db-load" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
 
-### db.load(ResourceClass, resourceName)
+### b.load(ResourceClass, resourceName)
 
 Register resource form Resource Class
 
@@ -67,9 +67,9 @@ Register resource form Resource Class
 | resourceName | string | Name of resource |
 
 
-<a class='md-heading-link' name="the-db-classes-the-db-getResource" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-getResource" ></a>
 
-### db.getResource(resourceName) -> `ClayResource`
+### b.getResource(resourceName) -> `ClayResource`
 
 Get a resource with name
 
@@ -78,9 +78,9 @@ Get a resource with name
 | resourceName | string | Name of the resource |
 
 
-<a class='md-heading-link' name="the-db-classes-the-db-hasResource" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>
 
-### db.hasResource(resourceName) -> `boolean`
+### b.hasResource(resourceName) -> `boolean`
 
 Check if resource exists
 
@@ -89,9 +89,9 @@ Check if resource exists
 | resourceName | string |  |
 
 
-<a class='md-heading-link' name="the-db-classes-the-db-load" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
 
-### db.load(ResourceClass, resourceName)
+### b.load(ResourceClass, resourceName)
 
 Register resource form Resource Class
 
@@ -101,9 +101,9 @@ Register resource form Resource Class
 | resourceName | string | Name of resource |
 
 
-<a class='md-heading-link' name="the-db-classes-the-db-getResource" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-getResource" ></a>
 
-### db.getResource(resourceName) -> `ClayResource`
+### b.getResource(resourceName) -> `ClayResource`
 
 Get a resource with name
 
@@ -112,9 +112,9 @@ Get a resource with name
 | resourceName | string | Name of the resource |
 
 
-<a class='md-heading-link' name="the-db-classes-the-db-hasResource" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>
 
-### db.hasResource(resourceName) -> `boolean`
+### b.hasResource(resourceName) -> `boolean`
 
 Check if resource exists
 

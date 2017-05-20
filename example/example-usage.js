@@ -1,7 +1,7 @@
 'use strict'
 
-const theDb = require('the-db')
-const { Resource, DataTypes } = theDb
+const TheDB = require('the-db')
+const { Resource, DataTypes } = TheDB
 const { STRING } = DataTypes
 
 // Define a resource class
@@ -40,7 +40,7 @@ class UserResource extends Resource {
   }
 }
 
-const db = theDb({
+const db = TheDB({
   dialect: 'sqlite', // Uses "clay-driver-sqlite" package
   storage: 'var/my-app.db' // File path to save
 })

@@ -4,7 +4,7 @@
       "name": "create",
       "access": "",
       "virtual": false,
-      "description": "Create a TheDb instance",
+      "description": "Create a TheDB instance",
       "parameters": [
         {
           "name": "args",
@@ -17,7 +17,7 @@
       ],
       "examples": [],
       "returns": {
-        "type": "TheDb",
+        "type": "TheDB",
         "description": ""
       }
     },
@@ -26,6 +26,14 @@
       "access": "",
       "virtual": false,
       "description": "Create driver from env",
+      "parameters": [],
+      "examples": []
+    },
+    {
+      "name": "setupForEnv",
+      "access": "",
+      "virtual": false,
+      "description": "Do setup for env",
       "parameters": [],
       "examples": []
     },
@@ -33,7 +41,7 @@
       "name": "create",
       "access": "",
       "virtual": false,
-      "description": "Create a TheDb instance",
+      "description": "Create a TheDB instance",
       "parameters": [
         {
           "name": "args",
@@ -46,7 +54,7 @@
       ],
       "examples": [],
       "returns": {
-        "type": "TheDb",
+        "type": "TheDB",
         "description": ""
       }
     },
@@ -57,18 +65,58 @@
       "description": "Create driver from env",
       "parameters": [],
       "examples": []
+    },
+    {
+      "name": "setupMysql",
+      "access": "",
+      "virtual": false,
+      "description": "",
+      "parameters": [],
+      "examples": []
+    },
+    {
+      "name": "setupPostgres",
+      "access": "",
+      "virtual": false,
+      "description": "",
+      "parameters": [],
+      "examples": []
+    },
+    {
+      "name": "setupSqlite",
+      "access": "",
+      "virtual": false,
+      "description": "",
+      "parameters": [],
+      "examples": []
+    },
+    {
+      "name": "toLowerKeys",
+      "access": "",
+      "virtual": false,
+      "description": "",
+      "parameters": [],
+      "examples": []
+    },
+    {
+      "name": "setupForEnv",
+      "access": "",
+      "virtual": false,
+      "description": "Do setup for env",
+      "parameters": [],
+      "examples": []
     }
   ],
   "classes": [
     {
-      "name": "TheDb",
+      "name": "TheDB",
       "description": "",
       "extends": [],
       "access": "",
       "virtual": false,
       "fires": "",
       "constructor": {
-        "name": "TheDb",
+        "name": "TheDB",
         "description": "",
         "parameters": [
           {
@@ -284,14 +332,14 @@
       ]
     },
     {
-      "name": "TheDb",
+      "name": "TheDB",
       "description": "",
       "extends": [],
       "access": "",
       "virtual": false,
       "fires": "",
       "constructor": {
-        "name": "TheDb",
+        "name": "TheDB",
         "description": "",
         "parameters": [
           {

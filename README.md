@@ -76,8 +76,8 @@ Usage
 ```javascript
 'use strict'
 
-const theDb = require('the-db')
-const { Resource, DataTypes } = theDb
+const TheDB = require('the-db')
+const { Resource, DataTypes } = TheDB
 const { STRING } = DataTypes
 
 // Define a resource class
@@ -116,7 +116,7 @@ class UserResource extends Resource {
   }
 }
 
-const db = theDb({
+const db = TheDB({
   dialect: 'sqlite', // Uses "clay-driver-sqlite" package
   storage: 'var/my-app.db' // File path to save
 })
@@ -146,11 +146,11 @@ tryExample().catch((err) => console.error(err))
 ```javascript
 'use strict'
 
-const theDb = require('the-db')
+const TheDB = require('the-db')
 
 // Using sqlite
 {
-  const sqlite = theDb({
+  const sqlite = TheDB({
     dialect: 'sqlite', // Uses "clay-driver-sqlite" package
     storage: 'var/my-app.db' // File path to save
   })
@@ -158,7 +158,7 @@ const theDb = require('the-db')
 
 // Using json
 {
-  const json = theDb({
+  const json = TheDB({
     dialect: 'json', // Uses "clay-driver-json" package
     storage: 'var/my-app.json' // File path to save
   })
@@ -166,7 +166,7 @@ const theDb = require('the-db')
 
 // Using mysql
 {
-  const mysql = theDb({
+  const mysql = TheDB({
     dialect: 'mysql', // Uses "clay-driver-mysql" package
     database: 'my-app',
     username: 'user01',
@@ -186,9 +186,9 @@ const theDb = require('the-db')
 API Guide
 -----
 
-+ [the-db@3.0.4](./doc/api/api.md)
++ [the-db@3.0.7](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
-  + [TheDb](./doc/api/api.md#the-db-class)
+  + [TheDB](./doc/api/api.md#the-d-b-class)
 
 
 <!-- Section from "doc/guides/10.API Guide.md.hbs" End -->
