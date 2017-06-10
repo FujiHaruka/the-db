@@ -6,6 +6,7 @@
 
 const setupMysql = require('../lib/helpers/setupMysql')
 const { ok, equal } = require('assert')
+const co = require('co')
 
 describe('setup-mysql', () => {
   before(() => {
@@ -14,9 +15,13 @@ describe('setup-mysql', () => {
   after(() => {
   })
 
-  it('Do test', () => {
-
-  })
+  it('Do test', () => co(function * () {
+    yield setupMysql({
+      database: 'hoge',
+      username: 'hoge',
+      password: 'hoge'
+    })
+  }))
 })
 
 /* global describe, before, after, it */
