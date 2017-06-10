@@ -221,27 +221,6 @@
           "examples": []
         },
         {
-          "name": "getResource",
-          "access": "",
-          "virtual": false,
-          "description": "Get a resource with name",
-          "parameters": [
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "Name of the resource",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "ClayResource",
-            "description": ""
-          }
-        },
-        {
           "name": "hasResource",
           "access": "",
           "virtual": false,
@@ -286,27 +265,6 @@
             }
           ],
           "examples": []
-        },
-        {
-          "name": "getResource",
-          "access": "",
-          "virtual": false,
-          "description": "Get a resource with name",
-          "parameters": [
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "Name of the resource",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "ClayResource",
-            "description": ""
-          }
         },
         {
           "name": "hasResource",
@@ -444,27 +402,6 @@
           "examples": []
         },
         {
-          "name": "getResource",
-          "access": "",
-          "virtual": false,
-          "description": "Get a resource with name",
-          "parameters": [
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "Name of the resource",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "ClayResource",
-            "description": ""
-          }
-        },
-        {
           "name": "hasResource",
           "access": "",
           "virtual": false,
@@ -509,27 +446,6 @@
             }
           ],
           "examples": []
-        },
-        {
-          "name": "getResource",
-          "access": "",
-          "virtual": false,
-          "description": "Get a resource with name",
-          "parameters": [
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "Name of the resource",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "ClayResource",
-            "description": ""
-          }
         },
         {
           "name": "hasResource",
