@@ -1,4 +1,4 @@
-# the-db@3.0.15
+# the-db@4.0.2
 
 DB for the-framework
 
@@ -7,10 +7,8 @@ DB for the-framework
 + [`TheDB`](#the-db-classes) Class
   + [new TheDB(config)](#the-db-classes-the-d-b-constructor)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
-  + [b.getResource(resourceName)](#the-db-classes-the-d-b-getResource)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
-  + [b.getResource(resourceName)](#the-db-classes-the-d-b-getResource)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
 
 ## Functions
@@ -67,17 +65,6 @@ Register resource form Resource Class
 | resourceName | string | Name of resource |
 
 
-<a class='md-heading-link' name="the-db-classes-the-d-b-getResource" ></a>
-
-### b.getResource(resourceName) -> `ClayResource`
-
-Get a resource with name
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| resourceName | string | Name of the resource |
-
-
 <a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>
 
 ### b.hasResource(resourceName) -> `boolean`
@@ -99,17 +86,6 @@ Register resource form Resource Class
 | ----- | --- | -------- |
 | ResourceClass | function | Resource class to register |
 | resourceName | string | Name of resource |
-
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-getResource" ></a>
-
-### b.getResource(resourceName) -> `ClayResource`
-
-Get a resource with name
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| resourceName | string | Name of the resource |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>

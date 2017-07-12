@@ -1,6 +1,6 @@
 {
   "name": "the-db",
-  "version": "3.0.15",
+  "version": "4.0.2",
   "description": "DB for the-framework",
   "main": "lib",
   "scripts": {
@@ -30,18 +30,18 @@
   "dependencies": {
     "asleep": "^1.0.3",
     "asobj": "^1.5.0",
-    "clay-constants": "^3.0.1",
+    "clay-constants": "^3.0.3",
     "clay-driver-json": "^3.0.3",
     "clay-driver-localstorage": "^2.0.1",
-    "clay-driver-memory": "^4.0.4",
-    "clay-driver-mysql": "^*",
-    "clay-driver-sqlite": "^3.0.2",
+    "clay-driver-memory": "^4.0.5",
+    "clay-driver-mysql": "^3.0.1",
+    "clay-driver-sqlite": "^4.0.1",
     "clay-lump": "^4.2.3",
     "clay-resource": "^3.1.14",
     "clay-resource-name": "^4.0.1",
     "execcli": "^5.0.0",
     "mkdirp": "^0.5.1",
-    "the-check": "^1.1.0"
+    "the-check": "^1.1.1"
   },
   "devDependencies": {
     "colorprint": "^4.1.0",
