@@ -1,474 +1,474 @@
 {
-  "functions": [
-    {
-      "name": "create",
-      "access": "",
-      "virtual": false,
-      "description": "Create a TheDB instance",
-      "parameters": [
+    "functions": [
         {
-          "name": "args",
-          "type": "*",
-          "description": "",
-          "default": "",
-          "optional": "",
-          "nullable": ""
-        }
-      ],
-      "examples": [],
-      "returns": {
-        "type": "TheDB",
-        "description": ""
-      }
-    },
-    {
-      "name": "driverFromEnv",
-      "access": "",
-      "virtual": false,
-      "description": "Create driver from env",
-      "parameters": [],
-      "examples": []
-    },
-    {
-      "name": "setupForEnv",
-      "access": "",
-      "virtual": false,
-      "description": "Do setup for env",
-      "parameters": [],
-      "examples": []
-    },
-    {
-      "name": "create",
-      "access": "",
-      "virtual": false,
-      "description": "Create a TheDB instance",
-      "parameters": [
+            "name": "create",
+            "access": "",
+            "virtual": false,
+            "description": "Create a TheDB instance",
+            "parameters": [
+                {
+                    "name": "args",
+                    "type": "*",
+                    "description": "",
+                    "default": "",
+                    "optional": "",
+                    "nullable": ""
+                }
+            ],
+            "examples": [],
+            "returns": {
+                "type": "TheDB",
+                "description": ""
+            }
+        },
         {
-          "name": "args",
-          "type": "*",
-          "description": "",
-          "default": "",
-          "optional": "",
-          "nullable": ""
-        }
-      ],
-      "examples": [],
-      "returns": {
-        "type": "TheDB",
-        "description": ""
-      }
-    },
-    {
-      "name": "driverFromEnv",
-      "access": "",
-      "virtual": false,
-      "description": "Create driver from env",
-      "parameters": [],
-      "examples": []
-    },
-    {
-      "name": "setupMysql",
-      "access": "",
-      "virtual": false,
-      "description": "",
-      "parameters": [],
-      "examples": []
-    },
-    {
-      "name": "setupPostgres",
-      "access": "",
-      "virtual": false,
-      "description": "",
-      "parameters": [],
-      "examples": []
-    },
-    {
-      "name": "setupSqlite",
-      "access": "",
-      "virtual": false,
-      "description": "",
-      "parameters": [],
-      "examples": []
-    },
-    {
-      "name": "toLowerKeys",
-      "access": "",
-      "virtual": false,
-      "description": "",
-      "parameters": [],
-      "examples": []
-    },
-    {
-      "name": "setupForEnv",
-      "access": "",
-      "virtual": false,
-      "description": "Do setup for env",
-      "parameters": [],
-      "examples": []
-    }
-  ],
-  "classes": [
-    {
-      "name": "TheDB",
-      "description": "",
-      "extends": [],
-      "access": "",
-      "virtual": false,
-      "fires": "",
-      "constructor": {
-        "name": "TheDB",
-        "description": "",
-        "parameters": [
-          {
-            "name": "config",
-            "type": "Object",
+            "name": "driverFromEnv",
+            "access": "",
+            "virtual": false,
+            "description": "Create driver from env",
+            "parameters": [],
+            "examples": []
+        },
+        {
+            "name": "setupForEnv",
+            "access": "",
+            "virtual": false,
+            "description": "Do setup for env",
+            "parameters": [],
+            "examples": []
+        },
+        {
+            "name": "create",
+            "access": "",
+            "virtual": false,
+            "description": "Create a TheDB instance",
+            "parameters": [
+                {
+                    "name": "args",
+                    "type": "*",
+                    "description": "",
+                    "default": "",
+                    "optional": "",
+                    "nullable": ""
+                }
+            ],
+            "examples": [],
+            "returns": {
+                "type": "TheDB",
+                "description": ""
+            }
+        },
+        {
+            "name": "driverFromEnv",
+            "access": "",
+            "virtual": false,
+            "description": "Create driver from env",
+            "parameters": [],
+            "examples": []
+        },
+        {
+            "name": "setupMysql",
+            "access": "",
+            "virtual": false,
             "description": "",
-            "default": "",
-            "optional": "",
-            "nullable": ""
-          },
-          {
-            "name": "config.name",
-            "type": "string",
-            "description": "Name of clay-lump",
-            "default": "uuid.v4()",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.dialect",
-            "type": "string",
-            "description": "Database dialect. \"mysql\", \"json\", \"memory\", \"localstorage\", or \"sqlite\"",
-            "default": "'memory'",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.storage",
-            "type": "string",
-            "description": "Storage file name for \"sqlite\" or \"json\" dialect",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.database",
-            "type": "string",
-            "description": "Name of database schema",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.username",
-            "type": "string",
-            "description": "Database username",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.password",
-            "type": "string",
-            "description": "Database password",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.host",
-            "type": "string",
-            "description": "Database password",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.port",
-            "type": "string",
-            "description": "Database password",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          }
-        ],
-        "examples": []
-      },
-      "functions": [
-        {
-          "name": "load",
-          "access": "",
-          "virtual": false,
-          "description": "Register resource form Resource Class",
-          "parameters": [
-            {
-              "name": "ResourceClass",
-              "type": "function",
-              "description": "Resource class to register",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            },
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "Name of resource",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": []
+            "parameters": [],
+            "examples": []
         },
         {
-          "name": "hasResource",
-          "access": "",
-          "virtual": false,
-          "description": "Check if resource exists",
-          "parameters": [
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "boolean",
-            "description": ""
-          }
-        },
-        {
-          "name": "load",
-          "access": "",
-          "virtual": false,
-          "description": "Register resource form Resource Class",
-          "parameters": [
-            {
-              "name": "ResourceClass",
-              "type": "function",
-              "description": "Resource class to register",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            },
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "Name of resource",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": []
-        },
-        {
-          "name": "hasResource",
-          "access": "",
-          "virtual": false,
-          "description": "Check if resource exists",
-          "parameters": [
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "boolean",
-            "description": ""
-          }
-        }
-      ]
-    },
-    {
-      "name": "TheDB",
-      "description": "",
-      "extends": [],
-      "access": "",
-      "virtual": false,
-      "fires": "",
-      "constructor": {
-        "name": "TheDB",
-        "description": "",
-        "parameters": [
-          {
-            "name": "config",
-            "type": "Object",
+            "name": "setupPostgres",
+            "access": "",
+            "virtual": false,
             "description": "",
-            "default": "",
-            "optional": "",
-            "nullable": ""
-          },
-          {
-            "name": "config.name",
-            "type": "string",
-            "description": "Name of clay-lump",
-            "default": "uuid.v4()",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.dialect",
-            "type": "string",
-            "description": "Database dialect. \"mysql\", \"json\", \"memory\", \"localstorage\", or \"sqlite\"",
-            "default": "'memory'",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.storage",
-            "type": "string",
-            "description": "Storage file name for \"sqlite\" or \"json\" dialect",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.database",
-            "type": "string",
-            "description": "Name of database schema",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.username",
-            "type": "string",
-            "description": "Database username",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.password",
-            "type": "string",
-            "description": "Database password",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.host",
-            "type": "string",
-            "description": "Database password",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          },
-          {
-            "name": "config.port",
-            "type": "string",
-            "description": "Database password",
-            "default": "",
-            "optional": true,
-            "nullable": ""
-          }
-        ],
-        "examples": []
-      },
-      "functions": [
-        {
-          "name": "load",
-          "access": "",
-          "virtual": false,
-          "description": "Register resource form Resource Class",
-          "parameters": [
-            {
-              "name": "ResourceClass",
-              "type": "function",
-              "description": "Resource class to register",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            },
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "Name of resource",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": []
+            "parameters": [],
+            "examples": []
         },
         {
-          "name": "hasResource",
-          "access": "",
-          "virtual": false,
-          "description": "Check if resource exists",
-          "parameters": [
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "boolean",
-            "description": ""
-          }
+            "name": "setupSqlite",
+            "access": "",
+            "virtual": false,
+            "description": "",
+            "parameters": [],
+            "examples": []
         },
         {
-          "name": "load",
-          "access": "",
-          "virtual": false,
-          "description": "Register resource form Resource Class",
-          "parameters": [
-            {
-              "name": "ResourceClass",
-              "type": "function",
-              "description": "Resource class to register",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            },
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "Name of resource",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": []
+            "name": "toLowerKeys",
+            "access": "",
+            "virtual": false,
+            "description": "",
+            "parameters": [],
+            "examples": []
         },
         {
-          "name": "hasResource",
-          "access": "",
-          "virtual": false,
-          "description": "Check if resource exists",
-          "parameters": [
-            {
-              "name": "resourceName",
-              "type": "string",
-              "description": "",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "boolean",
-            "description": ""
-          }
+            "name": "setupForEnv",
+            "access": "",
+            "virtual": false,
+            "description": "Do setup for env",
+            "parameters": [],
+            "examples": []
         }
-      ]
-    }
-  ]
+    ],
+    "classes": [
+        {
+            "name": "TheDB",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "TheDB",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "config",
+                        "type": "Object",
+                        "description": "",
+                        "default": "",
+                        "optional": "",
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.name",
+                        "type": "string",
+                        "description": "Name of clay-lump",
+                        "default": "uuid.v4()",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.dialect",
+                        "type": "string",
+                        "description": "Database dialect. \"mysql\", \"json\", \"memory\", \"localstorage\", or \"sqlite\"",
+                        "default": "'memory'",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.storage",
+                        "type": "string",
+                        "description": "Storage file name for \"sqlite\" or \"json\" dialect",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.database",
+                        "type": "string",
+                        "description": "Name of database schema",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.username",
+                        "type": "string",
+                        "description": "Database username",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.password",
+                        "type": "string",
+                        "description": "Database password",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.host",
+                        "type": "string",
+                        "description": "Database password",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.port",
+                        "type": "string",
+                        "description": "Database password",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    }
+                ],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "load",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register resource form Resource Class",
+                    "parameters": [
+                        {
+                            "name": "ResourceClass",
+                            "type": "function",
+                            "description": "Resource class to register",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "Name of resource",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "hasResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if resource exists",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "boolean",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "load",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register resource form Resource Class",
+                    "parameters": [
+                        {
+                            "name": "ResourceClass",
+                            "type": "function",
+                            "description": "Resource class to register",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "Name of resource",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "hasResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if resource exists",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "boolean",
+                        "description": ""
+                    }
+                }
+            ]
+        },
+        {
+            "name": "TheDB",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "TheDB",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "config",
+                        "type": "Object",
+                        "description": "",
+                        "default": "",
+                        "optional": "",
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.name",
+                        "type": "string",
+                        "description": "Name of clay-lump",
+                        "default": "uuid.v4()",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.dialect",
+                        "type": "string",
+                        "description": "Database dialect. \"mysql\", \"json\", \"memory\", \"localstorage\", or \"sqlite\"",
+                        "default": "'memory'",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.storage",
+                        "type": "string",
+                        "description": "Storage file name for \"sqlite\" or \"json\" dialect",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.database",
+                        "type": "string",
+                        "description": "Name of database schema",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.username",
+                        "type": "string",
+                        "description": "Database username",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.password",
+                        "type": "string",
+                        "description": "Database password",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.host",
+                        "type": "string",
+                        "description": "Database password",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.port",
+                        "type": "string",
+                        "description": "Database password",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    }
+                ],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "load",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register resource form Resource Class",
+                    "parameters": [
+                        {
+                            "name": "ResourceClass",
+                            "type": "function",
+                            "description": "Resource class to register",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "Name of resource",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "hasResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if resource exists",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "boolean",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "load",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register resource form Resource Class",
+                    "parameters": [
+                        {
+                            "name": "ResourceClass",
+                            "type": "function",
+                            "description": "Resource class to register",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "Name of resource",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "hasResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if resource exists",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "boolean",
+                        "description": ""
+                    }
+                }
+            ]
+        }
+    ]
 }
