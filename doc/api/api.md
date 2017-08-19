@@ -1,4 +1,4 @@
-# the-db@5.0.5
+# the-db@5.0.6
 
 DB for the-framework
 
@@ -55,7 +55,7 @@ Constructor of TheDB class
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
 
-### b.load(ResourceClass, resourceName)
+### b.load(ResourceClass, resourceName) -> `ClayResource`
 
 Register resource form Resource Class
 
@@ -78,7 +78,7 @@ Check if resource exists
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
 
-### b.load(ResourceClass, resourceName)
+### b.load(ResourceClass, resourceName) -> `ClayResource`
 
 Register resource form Resource Class
 

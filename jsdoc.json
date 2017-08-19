@@ -218,7 +218,11 @@
                             "nullable": ""
                         }
                     ],
-                    "examples": []
+                    "examples": [],
+                    "returns": {
+                        "type": "ClayResource",
+                        "description": "Loaded resource class"
+                    }
                 },
                 {
                     "name": "hasResource",
@@ -264,7 +268,11 @@
                             "nullable": ""
                         }
                     ],
-                    "examples": []
+                    "examples": [],
+                    "returns": {
+                        "type": "ClayResource",
+                        "description": "Loaded resource class"
+                    }
                 },
                 {
                     "name": "hasResource",
@@ -399,7 +407,11 @@
                             "nullable": ""
                         }
                     ],
-                    "examples": []
+                    "examples": [],
+                    "returns": {
+                        "type": "ClayResource",
+                        "description": "Loaded resource class"
+                    }
                 },
                 {
                     "name": "hasResource",
@@ -445,7 +457,11 @@
                             "nullable": ""
                         }
                     ],
-                    "examples": []
+                    "examples": [],
+                    "returns": {
+                        "type": "ClayResource",
+                        "description": "Loaded resource class"
+                    }
                 },
                 {
                     "name": "hasResource",
