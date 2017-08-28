@@ -1,6 +1,6 @@
 {
   "name": "the-db",
-  "version": "5.1.5",
+  "version": "5.2.0",
   "description": "DB for the-framework",
   "main": "lib",
   "scripts": {
@@ -37,7 +37,7 @@
     "clay-driver-mysql": "^4.0.4",
     "clay-driver-sqlite": "^5.0.6",
     "clay-lump": "^4.2.8",
-    "clay-resource": "^4.4.1",
+    "clay-resource": "^4.4.2",
     "clay-resource-name": "^4.0.3",
     "execcli": "^5.0.0",
     "mkdirp": "^0.5.1",

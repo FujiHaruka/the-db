@@ -5,9 +5,9 @@
 'use strict'
 
 const TheDB = require('../lib/TheDB')
-const { ok, equal } = require('assert')
+const {ok, equal} = require('assert')
 const co = require('co')
-const { ClayResource } = require('clay-resource')
+const {ClayResource} = require('clay-resource')
 
 describe('the-db', () => {
   before(() => {
@@ -18,11 +18,14 @@ describe('the-db', () => {
 
   it('The db', () => co(function * () {
 
-    let db = new TheDB({
+    const db = new TheDB({
       env: {
         dialect: 'memory'
       }
     })
+
+    db.on('close', () => {console.log('DB Closed')})
+
     class UserResource extends ClayResource {
       static inbound (attributes) {
         const digest = (password) => password.slice(0, 1)
@@ -37,17 +40,17 @@ describe('the-db', () => {
 
       static get policy () {
         return {
-          username: { type: 'STRING', unique: true },
-          passwordHash: { type: 'STRING' }
+          username: {type: 'STRING', unique: true},
+          passwordHash: {type: 'STRING'}
         }
       }
     }
 
     db.load(UserResource, 'User')
 
-    let { User } = db.resources
+    let {User} = db.resources
 
-    let user = yield User.create({ username: 'foo', password: 'hogehoge' })
+    let user = yield User.create({username: 'foo', password: 'hogehoge'})
     equal(user.username, 'foo')
     equal(user.passwordHash, 'h')
 
@@ -55,11 +58,13 @@ describe('the-db', () => {
     ok(user.$$at)
     let thrown
     try {
-      yield User.create({ username: 'foo', password: 'hogehoge2' })
+      yield User.create({username: 'foo', password: 'hogehoge2'})
     } catch (e) {
       thrown = e
     }
     ok(thrown)
+
+    db.close()
   }))
 })
 
