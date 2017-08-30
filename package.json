@@ -34,7 +34,7 @@
     "clay-driver-json": "^3.0.3",
     "clay-driver-localstorage": "^2.0.1",
     "clay-driver-memory": "^4.1.1",
-    "clay-driver-mysql": "^5.1.4",
+    "clay-driver-mysql": "^5.1.5",
     "clay-driver-sqlite": "^6.2.2",
     "clay-lump": "^4.2.8",
     "clay-resource": "^5.0.2",
