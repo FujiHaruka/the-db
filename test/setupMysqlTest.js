@@ -5,8 +5,7 @@
 'use strict'
 
 const setupMysql = require('../lib/helpers/setupMysql')
-const { ok, equal } = require('assert')
-const co = require('co')
+const {ok, equal} = require('assert')
 
 describe('setup-mysql', () => {
   before(() => {
@@ -15,13 +14,13 @@ describe('setup-mysql', () => {
   after(() => {
   })
 
-  it('Do test', () => co(function * () {
-    yield setupMysql({
+  it('Do test', async () => {
+    await  setupMysql({
       database: 'hoge',
       username: 'hoge',
       password: 'hoge'
     })
-  }))
+  })
 })
 
 /* global describe, before, after, it */

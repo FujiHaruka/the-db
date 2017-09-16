@@ -1,6 +1,6 @@
 {
   "name": "the-db",
-  "version": "6.0.7",
+  "version": "7.0.0",
   "description": "DB for the-framework",
   "main": "lib",
   "scripts": {
@@ -39,6 +39,7 @@
     "clay-lump": "^4.2.9",
     "clay-resource": "^5.0.4",
     "clay-resource-name": "^4.0.3",
+    "debug": "^3.0.1",
     "execcli": "^5.0.0",
     "mkdirp": "^0.5.1",
     "the-check": "^1.1.1"

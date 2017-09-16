@@ -109,6 +109,20 @@
     ],
     "classes": [
         {
+            "name": "Resource",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "Resource",
+                "description": "Resource for the DB",
+                "parameters": [],
+                "examples": []
+            }
+        },
+        {
             "name": "TheDB",
             "description": "",
             "extends": [],
@@ -296,6 +310,20 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "Resource",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "Resource",
+                "description": "Resource for the DB",
+                "parameters": [],
+                "examples": []
+            }
         },
         {
             "name": "TheDB",

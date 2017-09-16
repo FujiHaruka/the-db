@@ -1,8 +1,8 @@
 'use strict'
 
 const TheDB = require('the-db')
-const { Resource, DataTypes } = TheDB
-const { STRING } = DataTypes
+const {Resource, DataTypes} = TheDB
+const {STRING} = DataTypes
 
 // Define a resource class
 // See https://github.com/realglobe-Inc/clay-resource for more detail
@@ -24,8 +24,8 @@ class UserResource extends Resource {
   // https://github.com/realglobe-Inc/clay-policy#usage
   static get policy () {
     return {
-      username: { type: STRING },
-      password: { type: STRING }
+      username: {type: STRING},
+      password: {type: STRING}
     }
   }
 
@@ -33,10 +33,25 @@ class UserResource extends Resource {
   static entityClass (ResourceEntity) {
     return class UserResourceEntity extends ResourceEntity {
       get fullName () {
-        let { firstName, lastName } = this
-        return [ firstName, lastName ].filter(Boolean).join(' ')
+        let {firstName, lastName} = this
+        return [firstName, lastName].filter(Boolean).join(' ')
       }
     }
+  }
+
+  // Hook after entity create
+  static onCreate (created) {
+    console.log('Entity created:', created)
+  }
+
+  // Hook after entity update
+  static onUpdate (updated) {
+    console.log('Entity updated:', updated)
+  }
+
+  // Hook after entity destroy
+  static onDestroyed (destroyed) {
+    console.log('Entity destroyed:', destroyed)
   }
 }
 
@@ -51,8 +66,8 @@ db.load(UserResource, 'User')
 
 async function tryExample () {
   // Use the connected resource
-  const { User } = db.resources
-  let user = await User.create({ username: 'Black Fire', password: 'Super Cool' })
+  const {User} = db.resources
+  let user = await User.create({username: 'Black Fire', password: 'Super Cool'})
   /* ... */
 }
 

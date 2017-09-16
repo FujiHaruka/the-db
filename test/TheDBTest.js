@@ -6,7 +6,7 @@
 
 const TheDB = require('../lib/TheDB')
 const {ok, equal} = require('assert')
-const co = require('co')
+const asleep = require('asleep')
 const {ClayResource} = require('clay-resource')
 
 describe('the-db', () => {
@@ -16,7 +16,7 @@ describe('the-db', () => {
   after(() => {
   })
 
-  it('The db', () => co(function * () {
+  it('The db', async () => {
 
     const db = new TheDB({
       env: {
@@ -44,28 +44,36 @@ describe('the-db', () => {
           passwordHash: {type: 'STRING'}
         }
       }
+
+      static onCreate (created) {
+        console.log('created', created)
+      }
+
+      static onUpdate (updated) {
+        console.log('updated', updated)
+      }
     }
 
     db.load(UserResource, 'User')
 
-    let {User} = db.resources
+    const {User} = db.resources
 
-    let user = yield User.create({username: 'foo', password: 'hogehoge'})
+    const user = await User.create({username: 'foo', password: 'hogehoge'})
     equal(user.username, 'foo')
     equal(user.passwordHash, 'h')
 
     equal(user.$$as, 'User')
     ok(user.$$at)
-    let thrown
-    try {
-      yield User.create({username: 'foo', password: 'hogehoge2'})
-    } catch (e) {
-      thrown = e
+
+    {
+      const thrown = await User.create({username: 'foo', password: 'hogehoge2'}).catch((e) => e)
+      ok(thrown)
     }
-    ok(thrown)
+
+    await asleep(300)
 
     db.close()
-  }))
+  })
 })
 
 /* global describe, before, after, it */
