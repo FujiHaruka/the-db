@@ -7,7 +7,8 @@
 const setupMysql = require('../lib/helpers/setupMysql')
 const {ok, equal} = require('assert')
 
-describe('setup-mysql', () => {
+describe('setup-mysql', function () {
+  this.timeout(8000)
   before(() => {
   })
 
