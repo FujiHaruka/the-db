@@ -70,9 +70,12 @@ describe('the-db', () => {
       ok(thrown)
     }
 
+    const dumped = await db.dump(`${__dirname}/../tmp/testing-dump`)
+    ok(dumped)
+
     await asleep(300)
 
-    db.close()
+    await db.close()
   })
 })
 
