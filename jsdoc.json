@@ -276,8 +276,8 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "Promise.<boolean>",
-                        "description": "Migrated or not"
+                        "type": "Promise.<?Object>",
+                        "description": "Migration result"
                     }
                 },
                 {
@@ -347,8 +347,8 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "Promise.<boolean>",
-                        "description": "Migrated or not"
+                        "type": "Promise.<?Object>",
+                        "description": "Migration result"
                     }
                 }
             ]
@@ -535,8 +535,8 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "Promise.<boolean>",
-                        "description": "Migrated or not"
+                        "type": "Promise.<?Object>",
+                        "description": "Migration result"
                     }
                 },
                 {
@@ -606,8 +606,8 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "Promise.<boolean>",
-                        "description": "Migrated or not"
+                        "type": "Promise.<?Object>",
+                        "description": "Migration result"
                     }
                 }
             ]

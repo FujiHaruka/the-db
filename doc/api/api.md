@@ -1,4 +1,4 @@
-# the-db@7.2.0
+# the-db@7.2.1
 
 DB for the-framework
 
@@ -8,8 +8,10 @@ DB for the-framework
   + [new TheDB(config)](#the-db-classes-the-d-b-constructor)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
+  + [b.migrate(handlers)](#the-db-classes-the-d-b-migrate)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
+  + [b.migrate(handlers)](#the-db-classes-the-d-b-migrate)
 
 ## Functions
 
@@ -76,6 +78,17 @@ Check if resource exists
 | resourceName | string |  |
 
 
+<a class='md-heading-link' name="the-db-classes-the-d-b-migrate" ></a>
+
+### b.migrate(handlers) -> `Promise.<boolean>`
+
+Run database migration
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| handlers | Object.&lt;string, function()&gt; | Migration handler for each versions |
+
+
 <a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
 
 ### b.load(ResourceClass, resourceName) -> `ClayResource`
@@ -97,6 +110,17 @@ Check if resource exists
 | Param | Type | Description |
 | ----- | --- | -------- |
 | resourceName | string |  |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-migrate" ></a>
+
+### b.migrate(handlers) -> `Promise.<boolean>`
+
+Run database migration
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| handlers | Object.&lt;string, function()&gt; | Migration handler for each versions |
 
 
 
