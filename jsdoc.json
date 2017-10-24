@@ -260,6 +260,27 @@
                     }
                 },
                 {
+                    "name": "migrate",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Run database migration",
+                    "parameters": [
+                        {
+                            "name": "handlers",
+                            "type": "Object.<string, function()>",
+                            "description": "Migration handler for each versions",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": "Migrated or not"
+                    }
+                },
+                {
                     "name": "load",
                     "access": "",
                     "virtual": false,
@@ -308,6 +329,27 @@
                         "type": "boolean",
                         "description": ""
                     }
+                },
+                {
+                    "name": "migrate",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Run database migration",
+                    "parameters": [
+                        {
+                            "name": "handlers",
+                            "type": "Object.<string, function()>",
+                            "description": "Migration handler for each versions",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": "Migrated or not"
+                    }
                 }
             ]
         },
@@ -321,6 +363,20 @@
             "constructor": {
                 "name": "Resource",
                 "description": "Resource for the DB",
+                "parameters": [],
+                "examples": []
+            }
+        },
+        {
+            "name": "SchemaResource",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "SchemaResource",
+                "description": "Resource to manage schema",
                 "parameters": [],
                 "examples": []
             }
@@ -463,6 +519,27 @@
                     }
                 },
                 {
+                    "name": "migrate",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Run database migration",
+                    "parameters": [
+                        {
+                            "name": "handlers",
+                            "type": "Object.<string, function()>",
+                            "description": "Migration handler for each versions",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": "Migrated or not"
+                    }
+                },
+                {
                     "name": "load",
                     "access": "",
                     "virtual": false,
@@ -510,6 +587,27 @@
                     "returns": {
                         "type": "boolean",
                         "description": ""
+                    }
+                },
+                {
+                    "name": "migrate",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Run database migration",
+                    "parameters": [
+                        {
+                            "name": "handlers",
+                            "type": "Object.<string, function()>",
+                            "description": "Migration handler for each versions",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": "Migrated or not"
                     }
                 }
             ]
