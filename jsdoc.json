@@ -91,7 +91,7 @@
             "examples": []
         },
         {
-            "name": "execMysql",
+            "name": "execSqlite",
             "access": "",
             "virtual": false,
             "description": "",
