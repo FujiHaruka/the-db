@@ -118,6 +118,23 @@ describe('the-db', function () {
     await db.drop()
     await db.close()
   })
+
+  it('Sqlite', async () => {
+    const env = {
+      dialect: 'sqlite',
+      storage: `${__dirname}/../tmp/sqlite-testing/test.db`
+    }
+    const db = new TheDB({
+      env
+    })
+
+    await db.setup()
+
+    await db.exec('.help')
+
+    await db.drop()
+    await db.close()
+  })
 })
 
 /* global describe, before, after, it */

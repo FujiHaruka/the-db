@@ -91,6 +91,14 @@
             "examples": []
         },
         {
+            "name": "execMysql",
+            "access": "",
+            "virtual": false,
+            "description": "",
+            "parameters": [],
+            "examples": []
+        },
+        {
             "name": "setupMysql",
             "access": "",
             "virtual": false,
