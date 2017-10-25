@@ -9,7 +9,8 @@ const {ok, equal, deepEqual} = require('assert')
 const asleep = require('asleep')
 const {ClayResource} = require('clay-resource')
 
-describe('the-db', () => {
+describe('the-db', function () {
+  this.timeout(20 * 1000)
   before(() => {
   })
 
@@ -96,6 +97,23 @@ describe('the-db', () => {
     await asleep(300)
 
     await db.drop()
+    await db.close()
+  })
+
+  it('Mysql', async () => {
+    const setupForEnv = require('../lib/setupForEnv')
+    const env = {
+      dialect: 'mysql',
+      username: 'hoge',
+      password: 'fuge',
+      database: 'abc'
+    }
+    await setupForEnv(env)
+    const db = new TheDB({
+      env
+    })
+
+    await db.setup()
     await db.close()
   })
 })

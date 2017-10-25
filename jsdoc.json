@@ -30,6 +30,14 @@
             "examples": []
         },
         {
+            "name": "execForEnv",
+            "access": "",
+            "virtual": false,
+            "description": "Do exec for env",
+            "parameters": [],
+            "examples": []
+        },
+        {
             "name": "setupForEnv",
             "access": "",
             "virtual": false,
@@ -63,6 +71,22 @@
             "access": "",
             "virtual": false,
             "description": "Create driver from env",
+            "parameters": [],
+            "examples": []
+        },
+        {
+            "name": "execForEnv",
+            "access": "",
+            "virtual": false,
+            "description": "Do exec for env",
+            "parameters": [],
+            "examples": []
+        },
+        {
+            "name": "execMysql",
+            "access": "",
+            "virtual": false,
+            "description": "",
             "parameters": [],
             "examples": []
         },
