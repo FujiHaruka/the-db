@@ -114,6 +114,8 @@ describe('the-db', function () {
     await db.setup()
 
     await db.exec('SHOW TABLES;')
+
+    await db.drop()
     await db.close()
   })
 })
