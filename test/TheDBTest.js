@@ -95,6 +95,7 @@ describe('the-db', () => {
 
     await asleep(300)
 
+    await db.drop()
     await db.close()
   })
 })

@@ -1,4 +1,4 @@
-# the-db@7.2.1
+# the-db@7.2.2
 
 DB for the-framework
 
@@ -80,7 +80,7 @@ Check if resource exists
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-migrate" ></a>
 
-### b.migrate(handlers) -> `Promise.<boolean>`
+### b.migrate(handlers) -> `Promise.<?Object>`
 
 Run database migration
 
@@ -114,7 +114,7 @@ Check if resource exists
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-migrate" ></a>
 
-### b.migrate(handlers) -> `Promise.<boolean>`
+### b.migrate(handlers) -> `Promise.<?Object>`
 
 Run database migration
 
