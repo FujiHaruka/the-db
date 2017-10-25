@@ -101,19 +101,19 @@ describe('the-db', function () {
   })
 
   it('Mysql', async () => {
-    const setupForEnv = require('../lib/setupForEnv')
     const env = {
       dialect: 'mysql',
       username: 'hoge',
       password: 'fuge',
       database: 'abc'
     }
-    await setupForEnv(env)
     const db = new TheDB({
       env
     })
 
     await db.setup()
+
+    await db.exec('SHOW TABLES;')
     await db.close()
   })
 })

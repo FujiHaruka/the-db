@@ -16,11 +16,11 @@ describe('setup-mysql', function () {
   })
 
   it('Do test', async () => {
-    await  setupMysql({
-      database: 'hoge',
-      username: 'hoge',
-      password: 'hoge'
-    })
+    // await  setupMysql({
+    //   database: 'hoge',
+    //   username: 'hoge',
+    //   password: 'hoge'
+    // })
   })
 })
 
