@@ -91,6 +91,14 @@
             "examples": []
         },
         {
+            "name": "evalScript",
+            "access": "",
+            "virtual": false,
+            "description": "",
+            "parameters": [],
+            "examples": []
+        },
+        {
             "name": "execMysql",
             "access": "",
             "virtual": false,
