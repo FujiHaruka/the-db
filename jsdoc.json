@@ -83,6 +83,14 @@
             "examples": []
         },
         {
+            "name": "createTerminal",
+            "access": "",
+            "virtual": false,
+            "description": "",
+            "parameters": [],
+            "examples": []
+        },
+        {
             "name": "execMysql",
             "access": "",
             "virtual": false,
