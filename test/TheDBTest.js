@@ -7,7 +7,6 @@
 const TheDB = require('../lib/TheDB')
 const {ok, equal, deepEqual} = require('assert')
 const asleep = require('asleep')
-const {ClayResource} = require('clay-resource')
 
 describe('the-db', function () {
   this.timeout(20 * 1000)
@@ -27,7 +26,7 @@ describe('the-db', function () {
 
     db.on('close', () => {console.log('DB Closed')})
 
-    class UserResource extends ClayResource {
+    class UserResource extends TheDB.Resource {
       static inbound (attributes) {
         const digest = (password) => password.slice(0, 1)
         attributes.passwordHash = digest(attributes.password)
@@ -133,6 +132,40 @@ describe('the-db', function () {
     await db.exec('.help')
 
     await db.drop()
+    await db.close()
+  })
+
+  it('Use refresh loop', async () => {
+    const db = new TheDB({})
+
+    class UserResource extends TheDB.Resource {
+
+    }
+
+    db.load(UserResource, 'User')
+
+    const {User} = db.resources
+
+    const refreshed = []
+    await User.startRefreshLoop((entity) => {
+      refreshed.push(entity)
+    }, {interval: 10})
+
+    const [user01, user02, user03] = await User.createBulk([
+      {name: 'user01'},
+      {name: 'user02'},
+      {name: 'user03'}
+    ])
+
+    await User.requestToRefresh(user01)
+    await User.requestToRefresh(user02)
+
+    await asleep(250)
+
+    await User.stopRefreshLoop()
+
+    equal(refreshed.length, 2)
+
     await db.close()
   })
 })
