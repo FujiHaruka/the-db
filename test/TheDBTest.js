@@ -136,20 +136,24 @@ describe('the-db', function () {
   })
 
   it('Use refresh loop', async () => {
+    const {Resource, Refresher} = TheDB
     const db = new TheDB({})
 
-    class UserResource extends TheDB.Resource {
+    class UserResource extends Resource {
 
     }
 
     db.load(UserResource, 'User')
 
     const {User} = db.resources
-
+    const refresher = new Refresher(
+      (entity) => {
+        refreshed.push(entity)
+      },
+      {interval: 10}
+    )
     const refreshed = []
-    await User.startRefreshLoop((entity) => {
-      refreshed.push(entity)
-    }, {interval: 10})
+    await refresher.start()
 
     const [user01, user02, user03] = await User.createBulk([
       {name: 'user01'},
@@ -157,12 +161,12 @@ describe('the-db', function () {
       {name: 'user03'}
     ])
 
-    await User.requestToRefresh(user01)
-    await User.requestToRefresh(user02)
+    refresher.add(user01)
+    refresher.add(user02)
 
     await asleep(250)
 
-    await User.stopRefreshLoop()
+    await refresher.stop()
 
     equal(refreshed.length, 2)
 
