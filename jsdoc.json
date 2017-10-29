@@ -157,6 +157,38 @@
     ],
     "classes": [
         {
+            "name": "Refresher",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "Refresher",
+                "description": "Resource refresher",
+                "parameters": [],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "add",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Add refresh target",
+                    "parameters": [],
+                    "examples": []
+                },
+                {
+                    "name": "add",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Add refresh target",
+                    "parameters": [],
+                    "examples": []
+                }
+            ]
+        },
+        {
             "name": "TheDB",
             "description": "",
             "extends": [],
@@ -384,6 +416,38 @@
                         "type": "Promise.<?Object>",
                         "description": "Migration result"
                     }
+                }
+            ]
+        },
+        {
+            "name": "Refresher",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "Refresher",
+                "description": "Resource refresher",
+                "parameters": [],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "add",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Add refresh target",
+                    "parameters": [],
+                    "examples": []
+                },
+                {
+                    "name": "add",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Add refresh target",
+                    "parameters": [],
+                    "examples": []
                 }
             ]
         },
