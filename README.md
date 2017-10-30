@@ -255,7 +255,7 @@ tryExample().catch((err) => console.error(err))
 API Guide
 -----
 
-+ [the-db@7.8.1](./doc/api/api.md)
++ [the-db@7.8.2](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
   + [TheDB](./doc/api/api.md#the-d-b-class)
 
