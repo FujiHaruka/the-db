@@ -85,13 +85,28 @@ describe('the-db', function () {
         async '1.1.0' (db) {
           called.push('1.1.0')
           await db.updateVersion('2.0.0')
+        },
+        async '2.0.0' (db) {
+          called.push('2.0.0')
+          await db.updateVersion('3.0.0')
         }
       }
       ok(await db.migrate(handlers))
       ok(await db.migrate(handlers))
+      ok(await db.migrate(handlers))
       ok(!(await db.migrate(handlers)))
-      deepEqual(called, ['none', '1.1.0'])
+      deepEqual(called, ['none', '1.1.0', '2.0.0'])
     }
+
+    await asleep(100)
+
+    for (let i = 0; i < 10; i++) {
+      await db.resource('Ball').create({name: 'ball-' + i})
+    }
+
+    const dataDir = `${__dirname}/../tmp/foo/exports`
+    await db.export(dataDir)
+    await db.import(dataDir)
 
     await asleep(300)
 

@@ -147,6 +147,22 @@
             "examples": []
         },
         {
+            "name": "cliMix",
+            "access": "",
+            "virtual": false,
+            "description": "Add cli methods",
+            "parameters": [],
+            "examples": []
+        },
+        {
+            "name": "exportImportMix",
+            "access": "",
+            "virtual": false,
+            "description": "Add export/import methods",
+            "parameters": [],
+            "examples": []
+        },
+        {
             "name": "setupForEnv",
             "access": "",
             "virtual": false,
