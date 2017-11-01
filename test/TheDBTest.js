@@ -23,6 +23,8 @@ describe('the-db', function () {
       }
     })
 
+    db.load(TheDB.Resource, 'Hoge')
+
     db.on('close', () => {console.log('DB Closed')})
 
     class UserResource extends TheDB.Resource {
