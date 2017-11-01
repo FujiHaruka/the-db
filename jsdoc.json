@@ -468,6 +468,20 @@
             ]
         },
         {
+            "name": "HistoryResource",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "HistoryResource",
+                "description": "Resource of data history",
+                "parameters": [],
+                "examples": []
+            }
+        },
+        {
             "name": "Resource",
             "description": "",
             "extends": [],
