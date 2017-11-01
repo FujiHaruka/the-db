@@ -17,7 +17,6 @@ describe('the-db', function () {
   })
 
   it('The db', async () => {
-
     const db = new TheDB({
       env: {
         dialect: 'memory'

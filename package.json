@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "colorprint": "^4.1.0",
+    "coz": "^6.0.20",
     "eslint": "^4.9.0",
     "jsdoc-strip-async-await": "^0.1.0",
     "mocha": "^4.0.1",
