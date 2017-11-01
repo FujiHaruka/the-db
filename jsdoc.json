@@ -163,6 +163,14 @@
             "examples": []
         },
         {
+            "name": "migrateMix",
+            "access": "",
+            "virtual": false,
+            "description": "",
+            "parameters": [],
+            "examples": []
+        },
+        {
             "name": "setupForEnv",
             "access": "",
             "virtual": false,
@@ -342,15 +350,15 @@
                     }
                 },
                 {
-                    "name": "migrate",
+                    "name": "updateVersion",
                     "access": "",
                     "virtual": false,
-                    "description": "Run database migration",
+                    "description": "Update database migration version",
                     "parameters": [
                         {
-                            "name": "handlers",
-                            "type": "Object.<string, function()>",
-                            "description": "Migration handler for each versions",
+                            "name": "version",
+                            "type": "string",
+                            "description": "Version string",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -358,8 +366,8 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "Promise.<?Object>",
-                        "description": "Migration result"
+                        "type": "Promise.boolean",
+                        "description": "Success or not"
                     }
                 },
                 {
@@ -413,15 +421,15 @@
                     }
                 },
                 {
-                    "name": "migrate",
+                    "name": "updateVersion",
                     "access": "",
                     "virtual": false,
-                    "description": "Run database migration",
+                    "description": "Update database migration version",
                     "parameters": [
                         {
-                            "name": "handlers",
-                            "type": "Object.<string, function()>",
-                            "description": "Migration handler for each versions",
+                            "name": "version",
+                            "type": "string",
+                            "description": "Version string",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -429,8 +437,8 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "Promise.<?Object>",
-                        "description": "Migration result"
+                        "type": "Promise.boolean",
+                        "description": "Success or not"
                     }
                 }
             ]
@@ -647,15 +655,15 @@
                     }
                 },
                 {
-                    "name": "migrate",
+                    "name": "updateVersion",
                     "access": "",
                     "virtual": false,
-                    "description": "Run database migration",
+                    "description": "Update database migration version",
                     "parameters": [
                         {
-                            "name": "handlers",
-                            "type": "Object.<string, function()>",
-                            "description": "Migration handler for each versions",
+                            "name": "version",
+                            "type": "string",
+                            "description": "Version string",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -663,8 +671,8 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "Promise.<?Object>",
-                        "description": "Migration result"
+                        "type": "Promise.boolean",
+                        "description": "Success or not"
                     }
                 },
                 {
@@ -718,15 +726,15 @@
                     }
                 },
                 {
-                    "name": "migrate",
+                    "name": "updateVersion",
                     "access": "",
                     "virtual": false,
-                    "description": "Run database migration",
+                    "description": "Update database migration version",
                     "parameters": [
                         {
-                            "name": "handlers",
-                            "type": "Object.<string, function()>",
-                            "description": "Migration handler for each versions",
+                            "name": "version",
+                            "type": "string",
+                            "description": "Version string",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -734,8 +742,8 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "Promise.<?Object>",
-                        "description": "Migration result"
+                        "type": "Promise.boolean",
+                        "description": "Success or not"
                     }
                 }
             ]
