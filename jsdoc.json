@@ -468,14 +468,14 @@
             ]
         },
         {
-            "name": "HistoryResource",
+            "name": "LogResource",
             "description": "",
             "extends": [],
             "access": "",
             "virtual": false,
             "fires": "",
             "constructor": {
-                "name": "HistoryResource",
+                "name": "LogResource",
                 "description": "Resource of data history",
                 "parameters": [],
                 "examples": []
