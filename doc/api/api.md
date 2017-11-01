@@ -1,4 +1,4 @@
-# the-db@7.8.8
+# the-db@7.8.9
 
 DB for the-framework
 
@@ -8,10 +8,10 @@ DB for the-framework
   + [new TheDB(config)](#the-db-classes-the-d-b-constructor)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
-  + [b.migrate(handlers)](#the-db-classes-the-d-b-migrate)
+  + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
-  + [b.migrate(handlers)](#the-db-classes-the-d-b-migrate)
+  + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
 
 ## Functions
 
@@ -78,15 +78,15 @@ Check if resource exists
 | resourceName | string |  |
 
 
-<a class='md-heading-link' name="the-db-classes-the-d-b-migrate" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-updateVersion" ></a>
 
-### b.migrate(handlers) -> `Promise.<?Object>`
+### b.updateVersion(version) -> `Promise.boolean`
 
-Run database migration
+Update database migration version
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| handlers | Object.&lt;string, function()&gt; | Migration handler for each versions |
+| version | string | Version string |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
@@ -112,15 +112,15 @@ Check if resource exists
 | resourceName | string |  |
 
 
-<a class='md-heading-link' name="the-db-classes-the-d-b-migrate" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-updateVersion" ></a>
 
-### b.migrate(handlers) -> `Promise.<?Object>`
+### b.updateVersion(version) -> `Promise.boolean`
 
-Run database migration
+Update database migration version
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| handlers | Object.&lt;string, function()&gt; | Migration handler for each versions |
+| version | string | Version string |
 
 
 
