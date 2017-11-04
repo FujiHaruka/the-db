@@ -40,7 +40,7 @@
     "clay-driver-mysql": "^5.2.6",
     "clay-driver-sqlite": "^6.3.4",
     "clay-lump": "^4.2.18",
-    "clay-resource": "^5.4.7",
+    "clay-resource": "^5.4.8",
     "clay-resource-name": "^4.0.3",
     "debug": "^3.1.0",
     "execcli": "^5.0.2",
