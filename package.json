@@ -37,7 +37,7 @@
     "clay-driver-json": "^4.0.3",
     "clay-driver-localstorage": "^2.0.1",
     "clay-driver-memory": "^4.1.5",
-    "clay-driver-mysql": "^5.2.7",
+    "clay-driver-mysql": "^5.2.9",
     "clay-driver-sqlite": "^6.3.4",
     "clay-lump": "^4.2.19",
     "clay-resource": "^5.4.8",
@@ -52,7 +52,7 @@
   "devDependencies": {
     "colorprint": "^4.1.0",
     "coz": "^6.0.20",
-    "eslint": "^4.10.0",
+    "eslint": "^4.11.0",
     "jsdoc-strip-async-await": "^0.1.0",
     "mocha": "^4.0.1",
     "sqlite3": "^3.1.13",
