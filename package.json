@@ -9,7 +9,7 @@
     "prepare": "the-script-build && the-script-jsdoc",
     "release": "the-script-release -y",
     "share": "the-script-share",
-    "test": "mocha",
+    "test": "mocha --exit",
     "update": "the-script-update",
     "watch": "the-script-build -w"
   },
