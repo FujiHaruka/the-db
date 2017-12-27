@@ -39,7 +39,7 @@
     "clay-driver-memory": "^4.1.7",
     "clay-driver-mysql": "^5.2.16",
     "clay-driver-sqlite": "^6.3.11",
-    "clay-lump": "^4.2.27",
+    "clay-lump": "^4.2.28",
     "clay-resource": "^5.4.14",
     "clay-resource-name": "^4.0.3",
     "debug": "^3.1.0",
