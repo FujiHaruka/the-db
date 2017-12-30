@@ -198,12 +198,28 @@
                     "name": "add",
                     "access": "",
                     "virtual": false,
+                    "description": "",
+                    "parameters": [],
+                    "examples": []
+                },
+                {
+                    "name": "request",
+                    "access": "",
+                    "virtual": false,
                     "description": "Add refresh target",
                     "parameters": [],
                     "examples": []
                 },
                 {
                     "name": "add",
+                    "access": "",
+                    "virtual": false,
+                    "description": "",
+                    "parameters": [],
+                    "examples": []
+                },
+                {
+                    "name": "request",
                     "access": "",
                     "virtual": false,
                     "description": "Add refresh target",
@@ -461,12 +477,28 @@
                     "name": "add",
                     "access": "",
                     "virtual": false,
+                    "description": "",
+                    "parameters": [],
+                    "examples": []
+                },
+                {
+                    "name": "request",
+                    "access": "",
+                    "virtual": false,
                     "description": "Add refresh target",
                     "parameters": [],
                     "examples": []
                 },
                 {
                     "name": "add",
+                    "access": "",
+                    "virtual": false,
+                    "description": "",
+                    "parameters": [],
+                    "examples": []
+                },
+                {
+                    "name": "request",
                     "access": "",
                     "virtual": false,
                     "description": "Add refresh target",
