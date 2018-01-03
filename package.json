@@ -1,6 +1,6 @@
 {
   "name": "the-db",
-  "version": "7.8.46",
+  "version": "7.9.0",
   "description": "DB for the-framework",
   "main": "lib",
   "scripts": {
@@ -37,8 +37,8 @@
     "clay-driver-json": "^4.0.6",
     "clay-driver-localstorage": "^2.0.1",
     "clay-driver-memory": "^4.1.7",
-    "clay-driver-mysql": "^5.2.19",
-    "clay-driver-sqlite": "^6.3.11",
+    "clay-driver-mysql": "^5.2.20",
+    "clay-driver-sqlite": "^6.3.12",
     "clay-lump": "^4.2.29",
     "clay-resource": "^5.4.14",
     "clay-resource-name": "^4.0.3",
