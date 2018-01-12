@@ -1,4 +1,4 @@
-# the-db@7.9.4
+# the-db@8.0.0
 
 DB for the-framework
 

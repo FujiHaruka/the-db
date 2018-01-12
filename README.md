@@ -76,7 +76,7 @@ Usage
 ```javascript
 'use strict'
 
-const TheDB = require('the-db')
+const {TheDB} = require('the-db')
 const {Resource, DataTypes} = TheDB
 const {STRING} = DataTypes
 
@@ -161,7 +161,7 @@ tryExample().catch((err) => console.error(err))
 ```javascript
 'use strict'
 
-const TheDB = require('the-db')
+const {TheDB} = require('the-db')
 
 // Using sqlite
 {
@@ -198,7 +198,7 @@ const TheDB = require('the-db')
 ```javascript
 'use strict'
 
-const TheDB = require('the-db')
+const {TheDB} = require('the-db')
 const {Resource, DataTypes} = TheDB
 const {STRING} = DataTypes
 
@@ -255,7 +255,7 @@ tryExample().catch((err) => console.error(err))
 API Guide
 -----
 
-+ [the-db@7.9.4](./doc/api/api.md)
++ [the-db@8.0.0](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
   + [TheDB](./doc/api/api.md#the-d-b-class)
 
