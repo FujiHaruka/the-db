@@ -46,23 +46,23 @@
     "execcli": "^5.0.2",
     "mkdirp": "^0.5.1",
     "msgpack5": "^4.0.0",
-    "sequelize": "^4.28.8",
-    "the-check": "^1.2.1",
+    "sequelize": "^4.31.0",
+    "the-check": "^1.2.2",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
     "colorprint": "^4.1.0",
     "coz": "^6.0.20",
-    "eslint": "^4.14.0",
+    "eslint": "^4.15.0",
     "jsdoc-strip-async-await": "^0.1.0",
     "mocha": "^4.1.0",
     "sqlite3": "^3.1.13",
-    "the-script-build": "^2.0.0",
+    "the-script-build": "^2.0.1",
     "the-script-jsdoc": "^2.0.1",
     "the-script-release": "^1.0.6",
     "the-script-share": "^1.0.5",
     "the-script-update": "^1.0.0",
-    "the-templates": "^2.1.7"
+    "the-templates": "^2.1.11"
   },
   "engines": {
     "node": ">=8",
