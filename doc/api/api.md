@@ -1,4 +1,4 @@
-# the-db@9.0.0
+# the-db@9.0.1
 
 DB for the-framework
 
@@ -8,11 +8,13 @@ DB for the-framework
   + [new TheDB(config)](#the-db-classes-the-d-b-constructor)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.loadFromMapping(ResourceMapping)](#the-db-classes-the-d-b-loadFromMapping)
+  + [b.hookFromMapping(HookMapping, HookMapping)](#the-db-classes-the-d-b-hookFromMapping)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
   + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
   + [b.unref()](#the-db-classes-the-d-b-unref)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.loadFromMapping(ResourceMapping)](#the-db-classes-the-d-b-loadFromMapping)
+  + [b.hookFromMapping(HookMapping, HookMapping)](#the-db-classes-the-d-b-hookFromMapping)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
   + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
   + [b.unref()](#the-db-classes-the-d-b-unref)
@@ -82,6 +84,18 @@ Load resources from mapping object
 | ResourceMapping | Object.&lt;string, function()&gt; | Resource name and class |
 
 
+<a class='md-heading-link' name="the-db-classes-the-d-b-hookFromMapping" ></a>
+
+### b.hookFromMapping(HookMapping, HookMapping)
+
+Hook from mapping
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| HookMapping |  |  |
+| HookMapping | Object.&lt;string, function()&gt; | Resource name and hook creators |
+
+
 <a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>
 
 ### b.hasResource(resourceName) -> `boolean`
@@ -131,6 +145,18 @@ Load resources from mapping object
 | Param | Type | Description |
 | ----- | --- | -------- |
 | ResourceMapping | Object.&lt;string, function()&gt; | Resource name and class |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-hookFromMapping" ></a>
+
+### b.hookFromMapping(HookMapping, HookMapping)
+
+Hook from mapping
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| HookMapping |  |  |
+| HookMapping | Object.&lt;string, function()&gt; | Resource name and hook creators |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>

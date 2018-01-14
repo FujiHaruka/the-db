@@ -77,12 +77,14 @@ Usage
 'use strict'
 
 const {TheDB} = require('the-db')
-const {Resource, DataTypes} = TheDB
-const {STRING} = DataTypes
+const {
+  TheResource,
+  DataTypes: {STRING}
+} = require('the-resource-base')
 
 // Define a resource class
 // See https://github.com/realglobe-Inc/clay-resource for more detail
-class UserResource extends Resource {
+class UserResource extends TheResource {
   // Convert entity attributes on inbound
   static inbound (attributes) {
     const digest = (password) => { /* ... */ }
@@ -131,7 +133,7 @@ class UserResource extends Resource {
   }
 }
 
-const db = TheDB({
+const db = new TheDB({
   dialect: 'sqlite', // Uses "clay-driver-sqlite" package
   storage: 'var/my-app.db' // File path to save
 })
@@ -165,7 +167,7 @@ const {TheDB} = require('the-db')
 
 // Using sqlite
 {
-  const sqlite = TheDB({
+  const sqlite = new TheDB({
     dialect: 'sqlite', // Uses "clay-driver-sqlite" package
     storage: 'var/my-app.db' // File path to save
   })
@@ -173,7 +175,7 @@ const {TheDB} = require('the-db')
 
 // Using json
 {
-  const json = TheDB({
+  const json = new TheDB({
     dialect: 'json', // Uses "clay-driver-json" package
     storage: 'var/my-app.json' // File path to save
   })
@@ -199,14 +201,16 @@ const {TheDB} = require('the-db')
 'use strict'
 
 const {TheDB} = require('the-db')
-const {Resource, DataTypes} = TheDB
-const {STRING} = DataTypes
+const {
+  TheResource,
+  DataTypes: {STRING, /*....*/},
+} = require('the-resource-base')
 
-class UserResource extends Resource {
+class UserResource extends TheResource {
   /* ... */
 }
 
-const db = TheDB({/* ... */})
+const db = new TheDB({/* ... */})
 
 db.load(UserResource, 'User')
 
@@ -255,7 +259,7 @@ tryExample().catch((err) => console.error(err))
 API Guide
 -----
 
-+ [the-db@9.0.0](./doc/api/api.md)
++ [the-db@9.0.1](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
   + [TheDB](./doc/api/api.md#the-d-b-class)
 
