@@ -4,7 +4,7 @@ const {TheDB} = require('the-db')
 
 // Using sqlite
 {
-  const sqlite = TheDB({
+  const sqlite = new TheDB({
     dialect: 'sqlite', // Uses "clay-driver-sqlite" package
     storage: 'var/my-app.db' // File path to save
   })
@@ -12,7 +12,7 @@ const {TheDB} = require('the-db')
 
 // Using json
 {
-  const json = TheDB({
+  const json = new TheDB({
     dialect: 'json', // Uses "clay-driver-json" package
     storage: 'var/my-app.json' // File path to save
   })

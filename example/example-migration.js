@@ -1,14 +1,16 @@
 'use strict'
 
 const {TheDB} = require('the-db')
-const {Resource, DataTypes} = TheDB
-const {STRING} = DataTypes
+const {
+  TheResource,
+  DataTypes: {STRING, /*....*/},
+} = require('the-resource-base')
 
-class UserResource extends Resource {
+class UserResource extends TheResource {
   /* ... */
 }
 
-const db = TheDB({/* ... */})
+const db = new TheDB({/* ... */})
 
 db.load(UserResource, 'User')
 

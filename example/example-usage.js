@@ -1,12 +1,14 @@
 'use strict'
 
 const {TheDB} = require('the-db')
-const {Resource, DataTypes} = TheDB
-const {STRING} = DataTypes
+const {
+  TheResource,
+  DataTypes: {STRING}
+} = require('the-resource-base')
 
 // Define a resource class
 // See https://github.com/realglobe-Inc/clay-resource for more detail
-class UserResource extends Resource {
+class UserResource extends TheResource {
   // Convert entity attributes on inbound
   static inbound (attributes) {
     const digest = (password) => { /* ... */ }
@@ -55,7 +57,7 @@ class UserResource extends Resource {
   }
 }
 
-const db = TheDB({
+const db = new TheDB({
   dialect: 'sqlite', // Uses "clay-driver-sqlite" package
   storage: 'var/my-app.db' // File path to save
 })
