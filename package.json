@@ -40,7 +40,7 @@
     "clay-driver-mysql": "^5.2.20",
     "clay-driver-sqlite": "^6.3.12",
     "clay-lump": "^4.2.29",
-    "clay-resource": "^5.4.15",
+    "clay-resource": "^5.4.16",
     "clay-resource-name": "^4.0.3",
     "debug": "^3.1.0",
     "execcli": "^5.0.2",
@@ -50,7 +50,7 @@
     "the-check": "^1.2.2",
     "the-db-util": "^1.1.0",
     "the-refresher": "^1.0.2",
-    "the-resource-base": "^1.1.0",
+    "the-resource-base": "^1.2.2",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
