@@ -7,6 +7,8 @@
 const TheDB = require('../lib/TheDB')
 const {ok, equal, deepEqual} = require('assert')
 const asleep = require('asleep')
+const {TheResource} = require('the-resource-base')
+const {TheRefresher} = require('the-refresher')
 
 describe('the-db', function () {
   this.timeout(20 * 1000)
@@ -20,14 +22,22 @@ describe('the-db', function () {
     const db = new TheDB({
       env: {
         dialect: 'memory'
+      },
+      resources: {
+        Hoge: TheResource
+      },
+      hooks: {
+        Hoge: (db) => ({
+          onCreate (created) {
+            ok(created)
+          }
+        })
       }
     })
 
-    db.load(TheDB.Resource, 'Hoge')
-
     db.on('close', () => {console.log('DB Closed')})
 
-    class UserResource extends TheDB.Resource {
+    class UserResource extends TheResource {
       static inbound (attributes) {
         const digest = (password) => password.slice(0, 1)
         attributes.passwordHash = digest(attributes.password)
@@ -152,17 +162,16 @@ describe('the-db', function () {
   })
 
   it('Use refresh loop', async () => {
-    const {Resource, Refresher} = TheDB
     const db = new TheDB({})
 
-    class UserResource extends Resource {
+    class UserResource extends TheResource {
 
     }
 
     db.load(UserResource, 'User')
 
     const {User} = db.resources
-    const refresher = new Refresher(
+    const refresher = new TheRefresher(
       (entity) => {
         refreshed.push(entity)
       },
@@ -177,8 +186,8 @@ describe('the-db', function () {
       {name: 'user03'}
     ])
 
-    refresher.add(user01)
-    refresher.add(user02)
+    refresher.request(user01)
+    refresher.request(user02)
 
     await asleep(250)
 
