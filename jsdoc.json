@@ -496,6 +496,14 @@
                     }
                 },
                 {
+                    "name": "unref",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Aut close before exit",
+                    "parameters": [],
+                    "examples": []
+                },
+                {
                     "name": "load",
                     "access": "",
                     "virtual": false,
@@ -582,6 +590,14 @@
                         "type": "Promise.boolean",
                         "description": "Success or not"
                     }
+                },
+                {
+                    "name": "unref",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Aut close before exit",
+                    "parameters": [],
+                    "examples": []
                 }
             ]
         },
@@ -854,6 +870,14 @@
                     }
                 },
                 {
+                    "name": "unref",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Aut close before exit",
+                    "parameters": [],
+                    "examples": []
+                },
+                {
                     "name": "load",
                     "access": "",
                     "virtual": false,
@@ -940,6 +964,14 @@
                         "type": "Promise.boolean",
                         "description": "Success or not"
                     }
+                },
+                {
+                    "name": "unref",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Aut close before exit",
+                    "parameters": [],
+                    "examples": []
                 }
             ]
         }
