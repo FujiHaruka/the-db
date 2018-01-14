@@ -165,54 +165,6 @@
     ],
     "classes": [
         {
-            "name": "Refresher",
-            "description": "",
-            "extends": [],
-            "access": "",
-            "virtual": false,
-            "fires": "",
-            "constructor": {
-                "name": "Refresher",
-                "description": "Resource refresher",
-                "parameters": [],
-                "examples": []
-            },
-            "functions": [
-                {
-                    "name": "add",
-                    "access": "",
-                    "virtual": false,
-                    "description": "",
-                    "parameters": [],
-                    "examples": []
-                },
-                {
-                    "name": "request",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Add refresh target",
-                    "parameters": [],
-                    "examples": []
-                },
-                {
-                    "name": "add",
-                    "access": "",
-                    "virtual": false,
-                    "description": "",
-                    "parameters": [],
-                    "examples": []
-                },
-                {
-                    "name": "request",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Add refresh target",
-                    "parameters": [],
-                    "examples": []
-                }
-            ]
-        },
-        {
             "name": "TheDB",
             "description": "",
             "extends": [],
@@ -346,6 +298,31 @@
                     "examples": []
                 },
                 {
+                    "name": "hookFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Hook from mapping",
+                    "parameters": [
+                        {
+                            "name": "HookMapping",
+                            "type": "",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "HookMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and hook creators",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
                     "name": "hasResource",
                     "access": "",
                     "virtual": false,
@@ -446,6 +423,31 @@
                     "examples": []
                 },
                 {
+                    "name": "hookFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Hook from mapping",
+                    "parameters": [
+                        {
+                            "name": "HookMapping",
+                            "type": "",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "HookMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and hook creators",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
                     "name": "hasResource",
                     "access": "",
                     "virtual": false,
@@ -498,54 +500,6 @@
                         "type": "TheDB",
                         "description": "this"
                     }
-                }
-            ]
-        },
-        {
-            "name": "Refresher",
-            "description": "",
-            "extends": [],
-            "access": "",
-            "virtual": false,
-            "fires": "",
-            "constructor": {
-                "name": "Refresher",
-                "description": "Resource refresher",
-                "parameters": [],
-                "examples": []
-            },
-            "functions": [
-                {
-                    "name": "add",
-                    "access": "",
-                    "virtual": false,
-                    "description": "",
-                    "parameters": [],
-                    "examples": []
-                },
-                {
-                    "name": "request",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Add refresh target",
-                    "parameters": [],
-                    "examples": []
-                },
-                {
-                    "name": "add",
-                    "access": "",
-                    "virtual": false,
-                    "description": "",
-                    "parameters": [],
-                    "examples": []
-                },
-                {
-                    "name": "request",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Add refresh target",
-                    "parameters": [],
-                    "examples": []
                 }
             ]
         },
@@ -711,6 +665,31 @@
                     "examples": []
                 },
                 {
+                    "name": "hookFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Hook from mapping",
+                    "parameters": [
+                        {
+                            "name": "HookMapping",
+                            "type": "",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "HookMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and hook creators",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
                     "name": "hasResource",
                     "access": "",
                     "virtual": false,
@@ -803,6 +782,31 @@
                             "name": "ResourceMapping",
                             "type": "Object.<string, function()>",
                             "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "hookFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Hook from mapping",
+                    "parameters": [
+                        {
+                            "name": "HookMapping",
+                            "type": "",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "HookMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and hook creators",
                             "default": "",
                             "optional": "",
                             "nullable": ""
