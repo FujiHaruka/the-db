@@ -171,6 +171,98 @@
             "examples": []
         },
         {
+            "name": "listenMix",
+            "access": "",
+            "virtual": false,
+            "description": "Mixins for listen",
+            "parameters": [],
+            "examples": []
+        },
+        {
+            "name": "listenToCreate",
+            "access": "",
+            "virtual": false,
+            "description": "Listen to create",
+            "parameters": [
+                {
+                    "name": "onCreate",
+                    "type": "function",
+                    "description": "",
+                    "default": "",
+                    "optional": "",
+                    "nullable": ""
+                }
+            ],
+            "examples": [],
+            "returns": {
+                "type": "function",
+                "description": "close function"
+            }
+        },
+        {
+            "name": "listenToUpdate",
+            "access": "",
+            "virtual": false,
+            "description": "Listen to update",
+            "parameters": [
+                {
+                    "name": "onUpdate",
+                    "type": "function",
+                    "description": "",
+                    "default": "",
+                    "optional": "",
+                    "nullable": ""
+                }
+            ],
+            "examples": [],
+            "returns": {
+                "type": "function",
+                "description": "close function"
+            }
+        },
+        {
+            "name": "listenToDestroy",
+            "access": "",
+            "virtual": false,
+            "description": "Listen to destroy",
+            "parameters": [
+                {
+                    "name": "onDestroy",
+                    "type": "function",
+                    "description": "",
+                    "default": "",
+                    "optional": "",
+                    "nullable": ""
+                }
+            ],
+            "examples": [],
+            "returns": {
+                "type": "function",
+                "description": "close function"
+            }
+        },
+        {
+            "name": "listenToDrop",
+            "access": "",
+            "virtual": false,
+            "description": "Listen to drop",
+            "parameters": [
+                {
+                    "name": "onDrop",
+                    "type": "function",
+                    "description": "",
+                    "default": "",
+                    "optional": "",
+                    "nullable": ""
+                }
+            ],
+            "examples": [],
+            "returns": {
+                "type": "function",
+                "description": "close function"
+            }
+        },
+        {
             "name": "setupForEnv",
             "access": "",
             "virtual": false,
@@ -558,7 +650,10 @@
         {
             "name": "Resource",
             "description": "",
-            "extends": [],
+            "extends": [
+                "ClayResource",
+                "ListenMixed"
+            ],
             "access": "",
             "virtual": false,
             "fires": "",
