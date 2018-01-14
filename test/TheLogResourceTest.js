@@ -1,13 +1,13 @@
 /**
- * Test for evalScript.
+ * Test for TheLogResource.
  * Runs with mocha.
  */
 'use strict'
 
-const evalScript = require('../lib/helpers/evalScript')
+const TheLogResource = require('../lib/resources/TheLogResource')
 const { ok, equal } = require('assert')
 
-describe('eval-script', () => {
+describe('the-log-resource', () => {
   before(() => {
   })
 

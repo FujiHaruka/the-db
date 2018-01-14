@@ -1,4 +1,4 @@
-# the-db@8.2.1
+# the-db@8.2.2
 
 DB for the-framework
 
@@ -10,10 +10,12 @@ DB for the-framework
   + [b.loadFromMapping(ResourceMapping)](#the-db-classes-the-d-b-loadFromMapping)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
   + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
+  + [b.unref()](#the-db-classes-the-d-b-unref)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.loadFromMapping(ResourceMapping)](#the-db-classes-the-d-b-loadFromMapping)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
   + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
+  + [b.unref()](#the-db-classes-the-d-b-unref)
 
 ## Functions
 
@@ -102,6 +104,12 @@ Update database migration version
 | version | string | Version string |
 
 
+<a class='md-heading-link' name="the-db-classes-the-d-b-unref" ></a>
+
+### b.unref() -> `TheDB`
+
+Aut close before exit
+
 <a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
 
 ### b.load(ResourceClass, resourceName) -> `ClayResource`
@@ -146,6 +154,12 @@ Update database migration version
 | ----- | --- | -------- |
 | version | string | Version string |
 
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-unref" ></a>
+
+### b.unref() -> `TheDB`
+
+Aut close before exit
 
 
 

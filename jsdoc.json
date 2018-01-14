@@ -91,14 +91,6 @@
             "examples": []
         },
         {
-            "name": "evalScript",
-            "access": "",
-            "virtual": false,
-            "description": "",
-            "parameters": [],
-            "examples": []
-        },
-        {
             "name": "execMysql",
             "access": "",
             "virtual": false,
@@ -139,14 +131,6 @@
             "examples": []
         },
         {
-            "name": "toLowerKeys",
-            "access": "",
-            "virtual": false,
-            "description": "",
-            "parameters": [],
-            "examples": []
-        },
-        {
             "name": "cliMix",
             "access": "",
             "virtual": false,
@@ -169,98 +153,6 @@
             "description": "",
             "parameters": [],
             "examples": []
-        },
-        {
-            "name": "listenMix",
-            "access": "",
-            "virtual": false,
-            "description": "Mixins for listen",
-            "parameters": [],
-            "examples": []
-        },
-        {
-            "name": "listenToCreate",
-            "access": "",
-            "virtual": false,
-            "description": "Listen to create",
-            "parameters": [
-                {
-                    "name": "onCreate",
-                    "type": "function",
-                    "description": "",
-                    "default": "",
-                    "optional": "",
-                    "nullable": ""
-                }
-            ],
-            "examples": [],
-            "returns": {
-                "type": "function",
-                "description": "close function"
-            }
-        },
-        {
-            "name": "listenToUpdate",
-            "access": "",
-            "virtual": false,
-            "description": "Listen to update",
-            "parameters": [
-                {
-                    "name": "onUpdate",
-                    "type": "function",
-                    "description": "",
-                    "default": "",
-                    "optional": "",
-                    "nullable": ""
-                }
-            ],
-            "examples": [],
-            "returns": {
-                "type": "function",
-                "description": "close function"
-            }
-        },
-        {
-            "name": "listenToDestroy",
-            "access": "",
-            "virtual": false,
-            "description": "Listen to destroy",
-            "parameters": [
-                {
-                    "name": "onDestroy",
-                    "type": "function",
-                    "description": "",
-                    "default": "",
-                    "optional": "",
-                    "nullable": ""
-                }
-            ],
-            "examples": [],
-            "returns": {
-                "type": "function",
-                "description": "close function"
-            }
-        },
-        {
-            "name": "listenToDrop",
-            "access": "",
-            "virtual": false,
-            "description": "Listen to drop",
-            "parameters": [
-                {
-                    "name": "onDrop",
-                    "type": "function",
-                    "description": "",
-                    "default": "",
-                    "optional": "",
-                    "nullable": ""
-                }
-            ],
-            "examples": [],
-            "returns": {
-                "type": "function",
-                "description": "close function"
-            }
         },
         {
             "name": "setupForEnv",
@@ -501,7 +393,11 @@
                     "virtual": false,
                     "description": "Aut close before exit",
                     "parameters": [],
-                    "examples": []
+                    "examples": [],
+                    "returns": {
+                        "type": "TheDB",
+                        "description": "this"
+                    }
                 },
                 {
                     "name": "load",
@@ -597,7 +493,11 @@
                     "virtual": false,
                     "description": "Aut close before exit",
                     "parameters": [],
-                    "examples": []
+                    "examples": [],
+                    "returns": {
+                        "type": "TheDB",
+                        "description": "this"
+                    }
                 }
             ]
         },
@@ -650,45 +550,28 @@
             ]
         },
         {
-            "name": "LogResource",
+            "name": "TheLogResource",
             "description": "",
             "extends": [],
             "access": "",
             "virtual": false,
             "fires": "",
             "constructor": {
-                "name": "LogResource",
+                "name": "TheLogResource",
                 "description": "Resource of data history",
                 "parameters": [],
                 "examples": []
             }
         },
         {
-            "name": "Resource",
-            "description": "",
-            "extends": [
-                "ClayResource",
-                "ListenMixed"
-            ],
-            "access": "",
-            "virtual": false,
-            "fires": "",
-            "constructor": {
-                "name": "Resource",
-                "description": "Resource for the DB",
-                "parameters": [],
-                "examples": []
-            }
-        },
-        {
-            "name": "SchemaResource",
+            "name": "TheSchemaResource",
             "description": "",
             "extends": [],
             "access": "",
             "virtual": false,
             "fires": "",
             "constructor": {
-                "name": "SchemaResource",
+                "name": "TheSchemaResource",
                 "description": "Resource to manage schema",
                 "parameters": [],
                 "examples": []
@@ -875,7 +758,11 @@
                     "virtual": false,
                     "description": "Aut close before exit",
                     "parameters": [],
-                    "examples": []
+                    "examples": [],
+                    "returns": {
+                        "type": "TheDB",
+                        "description": "this"
+                    }
                 },
                 {
                     "name": "load",
@@ -971,7 +858,11 @@
                     "virtual": false,
                     "description": "Aut close before exit",
                     "parameters": [],
-                    "examples": []
+                    "examples": [],
+                    "returns": {
+                        "type": "TheDB",
+                        "description": "this"
+                    }
                 }
             ]
         }
