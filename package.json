@@ -1,6 +1,6 @@
 {
   "name": "the-db",
-  "version": "8.1.1",
+  "version": "8.2.0",
   "description": "DB for the-framework",
   "main": "lib",
   "scripts": {
