@@ -345,6 +345,23 @@
                     }
                 },
                 {
+                    "name": "loadFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load resources from mapping object",
+                    "parameters": [
+                        {
+                            "name": "ResourceMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
                     "name": "hasResource",
                     "access": "",
                     "virtual": false,
@@ -414,6 +431,23 @@
                         "type": "ClayResource",
                         "description": "Loaded resource class"
                     }
+                },
+                {
+                    "name": "loadFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load resources from mapping object",
+                    "parameters": [
+                        {
+                            "name": "ResourceMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
                 },
                 {
                     "name": "hasResource",
@@ -666,6 +700,23 @@
                     }
                 },
                 {
+                    "name": "loadFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load resources from mapping object",
+                    "parameters": [
+                        {
+                            "name": "ResourceMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
                     "name": "hasResource",
                     "access": "",
                     "virtual": false,
@@ -735,6 +786,23 @@
                         "type": "ClayResource",
                         "description": "Loaded resource class"
                     }
+                },
+                {
+                    "name": "loadFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load resources from mapping object",
+                    "parameters": [
+                        {
+                            "name": "ResourceMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
                 },
                 {
                     "name": "hasResource",
