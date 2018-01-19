@@ -197,6 +197,64 @@ describe('the-db', function () {
 
     await db.close()
   })
+
+  it('Nested search', async () => {
+    const env = {
+      dialect: 'memory',
+    }
+    const db = new TheDB({env})
+
+    class UserResource extends TheResource {
+      static get indices () {
+        return [
+          'profile.name',
+          'profile.email'
+        ]
+      }
+    }
+
+    class ProfileResource extends TheResource {
+
+    }
+
+    const User = db.load(UserResource, 'User')
+    const Profile = db.load(ProfileResource, 'Profile')
+
+    const user = await User.create({name: 'user01'})
+    const profile = await Profile.create({name: 'User 01', email: 'u01@example.com'})
+    await user.update({profile})
+
+    ok(
+      await User.first({'profile.email': 'u01@example.com'})
+    )
+    ok(
+      !await User.first({'profile.email': 'u02@example.com'})
+    )
+
+    await profile.update({email: 'u02@example.com'})
+
+    ok(
+      await User.first({'profile.email': 'u01@example.com'})
+    )
+    ok(
+      !await User.first({'profile.email': 'u02@example.com'})
+    )
+
+    await user.update({profile})
+    await user.save()
+
+    ok(
+      !await User.first({'profile.email': 'u01@example.com'})
+    )
+    ok(
+      await User.first({'profile.email': 'u02@example.com'})
+    )
+
+    await db.setup()
+
+    await db.drop()
+    await db.close()
+  })
 })
 
 /* global describe, before, after, it */

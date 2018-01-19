@@ -31,6 +31,11 @@ class UserResource extends TheResource {
     }
   }
 
+  // Create index to enable filter/sort with nested attributes
+  static get indices () {
+    return ['profile.name', 'profile.email']
+  }
+
   // Enhance entity class
   static entityClass (ResourceEntity) {
     return class UserResourceEntity extends ResourceEntity {

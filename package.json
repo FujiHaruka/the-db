@@ -1,32 +1,15 @@
 {
   "name": "the-db",
-  "version": "9.0.7",
   "description": "DB for the-framework",
-  "main": "lib",
-  "scripts": {
-    "build": "the-script-build",
-    "doc": "the-script-jsdoc",
-    "prepare": "the-script-build && the-script-jsdoc",
-    "release": "the-script-release -y",
-    "share": "the-script-share",
-    "test": "mocha --exit",
-    "update": "the-script-update",
-    "watch": "the-script-build -w"
-  },
-  "repository": "the-labo/the-db",
-  "keywords": [
-    "the"
-  ],
+  "version": "9.0.7",
   "author": {
     "name": "Taka Okunishi",
     "email": "okunishinishi@gmail.com",
     "url": "http://okunishitaka.com"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/the-labo/the-db/issues"
   },
-  "homepage": "https://github.com/the-labo/the-db#readme",
   "dependencies": {
     "amkdirp": "^2.0.0",
     "asfs": "^2.0.1",
@@ -40,7 +23,7 @@
     "clay-driver-mysql": "^5.2.20",
     "clay-driver-sqlite": "^6.3.12",
     "clay-lump": "^4.2.29",
-    "clay-resource": "^5.4.16",
+    "clay-resource": "^5.5.1",
     "clay-resource-name": "^4.0.3",
     "debug": "^3.1.0",
     "execcli": "^5.0.2",
@@ -51,24 +34,41 @@
     "the-db-util": "^1.1.0",
     "the-refresher": "^1.0.2",
     "the-resource-base": "^1.2.3",
-    "uuid": "^3.1.0"
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "colorprint": "^4.1.0",
     "coz": "^6.0.20",
     "eslint": "^4.15.0",
     "jsdoc-strip-async-await": "^0.1.0",
-    "mocha": "^4.1.0",
+    "mocha": "^5.0.0",
     "sqlite3": "^3.1.13",
-    "the-script-build": "^2.0.3",
+    "the-script-build": "^2.0.4",
     "the-script-jsdoc": "^2.0.1",
     "the-script-release": "^1.0.6",
     "the-script-share": "^1.0.5",
     "the-script-update": "^1.0.0",
-    "the-templates": "^2.2.1"
+    "the-templates": "^2.3.1"
   },
   "engines": {
     "node": ">=8",
     "npm": ">=5"
+  },
+  "homepage": "https://github.com/the-labo/the-db#readme",
+  "keywords": [
+    "the"
+  ],
+  "license": "MIT",
+  "main": "lib",
+  "repository": "the-labo/the-db",
+  "scripts": {
+    "build": "the-script-build",
+    "doc": "the-script-jsdoc",
+    "prepare": "the-script-build && the-script-jsdoc",
+    "release": "the-script-release -y",
+    "share": "the-script-share",
+    "test": "mocha --exit",
+    "update": "the-script-update",
+    "watch": "the-script-build -w"
   }
 }

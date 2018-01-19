@@ -107,6 +107,11 @@ class UserResource extends TheResource {
     }
   }
 
+  // Create index to enable filter/sort with nested attributes
+  static get indices () {
+    return ['profile.name', 'profile.email']
+  }
+
   // Enhance entity class
   static entityClass (ResourceEntity) {
     return class UserResourceEntity extends ResourceEntity {
@@ -259,7 +264,7 @@ tryExample().catch((err) => console.error(err))
 API Guide
 -----
 
-+ [the-db@9.0.6](./doc/api/api.md)
++ [the-db@9.0.7](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
   + [TheDB](./doc/api/api.md#the-d-b-class)
 
