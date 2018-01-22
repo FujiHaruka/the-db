@@ -27,7 +27,7 @@ class UserResource extends TheResource {
   static get policy () {
     return {
       username: {type: STRING},
-      password: {type: STRING}
+      password: {type: STRING},
     }
   }
 

@@ -103,7 +103,7 @@ class UserResource extends TheResource {
   static get policy () {
     return {
       username: {type: STRING},
-      password: {type: STRING}
+      password: {type: STRING},
     }
   }
 
@@ -264,7 +264,7 @@ tryExample().catch((err) => console.error(err))
 API Guide
 -----
 
-+ [the-db@9.0.7](./doc/api/api.md)
++ [the-db@9.0.8](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-db-function-create)
   + [TheDB](./doc/api/api.md#the-d-b-class)
 
