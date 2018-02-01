@@ -12,12 +12,12 @@
   },
   "dependencies": {
     "amkdirp": "^2.0.0",
-    "asfs": "^2.0.1",
+    "asfs": "^2.0.2",
     "asleep": "^1.0.3",
     "aslogger": "^2.0.0",
     "asobj": "^2.0.10",
     "clay-constants": "^3.4.4",
-    "clay-driver-json": "^4.0.7",
+    "clay-driver-json": "^4.0.8",
     "clay-driver-localstorage": "^2.0.1",
     "clay-driver-memory": "^4.1.8",
     "clay-driver-mysql": "^5.2.20",
@@ -29,7 +29,7 @@
     "execcli": "^5.0.2",
     "mkdirp": "^0.5.1",
     "msgpack5": "^4.0.1",
-    "sequelize": "^4.31.2",
+    "sequelize": "^4.32.2",
     "the-check": "^1.2.2",
     "the-db-util": "^1.1.0",
     "the-refresher": "^1.0.2",
@@ -48,7 +48,7 @@
     "the-script-release": "^1.0.6",
     "the-script-share": "^1.0.5",
     "the-script-update": "^1.0.0",
-    "the-templates": "^2.4.3"
+    "the-templates": "^2.5.4"
   },
   "engines": {
     "node": ">=8",
