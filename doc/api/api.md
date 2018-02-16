@@ -1,4 +1,4 @@
-# the-db@9.0.11
+# the-db@9.1.0
 
 DB for the-framework
 
@@ -6,18 +6,18 @@ DB for the-framework
   + [create(args)](#the-db-function-create)
 + [`TheDB`](#the-db-classes) Class
   + [new TheDB(config)](#the-db-classes-the-d-b-constructor)
+  + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
+  + [b.hookFromMapping(HookMapping, HookMapping)](#the-db-classes-the-d-b-hookFromMapping)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.loadFromMapping(ResourceMapping)](#the-db-classes-the-d-b-loadFromMapping)
-  + [b.hookFromMapping(HookMapping, HookMapping)](#the-db-classes-the-d-b-hookFromMapping)
-  + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
-  + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
   + [b.unref()](#the-db-classes-the-d-b-unref)
+  + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
+  + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
+  + [b.hookFromMapping(HookMapping, HookMapping)](#the-db-classes-the-d-b-hookFromMapping)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.loadFromMapping(ResourceMapping)](#the-db-classes-the-d-b-loadFromMapping)
-  + [b.hookFromMapping(HookMapping, HookMapping)](#the-db-classes-the-d-b-hookFromMapping)
-  + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
-  + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
   + [b.unref()](#the-db-classes-the-d-b-unref)
+  + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
 
 ## Functions
 
@@ -61,27 +61,15 @@ Constructor of TheDB class
 | config.port | string | Database password |
 
 
-<a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>
 
-### b.load(ResourceClass, resourceName) -> `ClayResource`
+### b.hasResource(resourceName) -> `boolean`
 
-Register resource form Resource Class
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| ResourceClass | function | Resource class to register |
-| resourceName | string | Name of resource |
-
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-loadFromMapping" ></a>
-
-### b.loadFromMapping(ResourceMapping)
-
-Load resources from mapping object
+Check if resource exists
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| ResourceMapping | Object.&lt;string, function()&gt; | Resource name and class |
+| resourceName | string |  |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-hookFromMapping" ></a>
@@ -95,34 +83,6 @@ Hook from mapping
 | HookMapping |  |  |
 | HookMapping | Object.&lt;string, function()&gt; | Resource name and hook creators |
 
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>
-
-### b.hasResource(resourceName) -> `boolean`
-
-Check if resource exists
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| resourceName | string |  |
-
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-updateVersion" ></a>
-
-### b.updateVersion(version) -> `Promise.boolean`
-
-Update database migration version
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| version | string | Version string |
-
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-unref" ></a>
-
-### b.unref() -> `TheDB`
-
-Aut close before exit
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
 
@@ -147,16 +107,21 @@ Load resources from mapping object
 | ResourceMapping | Object.&lt;string, function()&gt; | Resource name and class |
 
 
-<a class='md-heading-link' name="the-db-classes-the-d-b-hookFromMapping" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-unref" ></a>
 
-### b.hookFromMapping(HookMapping, HookMapping)
+### b.unref() -> `TheDB`
 
-Hook from mapping
+Aut close before exit
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-updateVersion" ></a>
+
+### b.updateVersion(version) -> `Promise.boolean`
+
+Update database migration version
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| HookMapping |  |  |
-| HookMapping | Object.&lt;string, function()&gt; | Resource name and hook creators |
+| version | string | Version string |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>
@@ -170,6 +135,47 @@ Check if resource exists
 | resourceName | string |  |
 
 
+<a class='md-heading-link' name="the-db-classes-the-d-b-hookFromMapping" ></a>
+
+### b.hookFromMapping(HookMapping, HookMapping)
+
+Hook from mapping
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| HookMapping |  |  |
+| HookMapping | Object.&lt;string, function()&gt; | Resource name and hook creators |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
+
+### b.load(ResourceClass, resourceName) -> `ClayResource`
+
+Register resource form Resource Class
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| ResourceClass | function | Resource class to register |
+| resourceName | string | Name of resource |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-loadFromMapping" ></a>
+
+### b.loadFromMapping(ResourceMapping)
+
+Load resources from mapping object
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| ResourceMapping | Object.&lt;string, function()&gt; | Resource name and class |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-unref" ></a>
+
+### b.unref() -> `TheDB`
+
+Aut close before exit
+
 <a class='md-heading-link' name="the-db-classes-the-d-b-updateVersion" ></a>
 
 ### b.updateVersion(version) -> `Promise.boolean`
@@ -180,12 +186,6 @@ Update database migration version
 | ----- | --- | -------- |
 | version | string | Version string |
 
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-unref" ></a>
-
-### b.unref() -> `TheDB`
-
-Aut close before exit
 
 
 

@@ -246,6 +246,30 @@
                         "default": "",
                         "optional": true,
                         "nullable": ""
+                    },
+                    {
+                        "name": "config.plugins",
+                        "type": "object",
+                        "description": "Database plugin creators",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.hooks",
+                        "type": "object",
+                        "description": "Database hook creators",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.resources",
+                        "type": "object",
+                        "description": "Database resource classes",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
                     }
                 ],
                 "examples": []
@@ -273,23 +297,15 @@
                     }
                 },
                 {
-                    "name": "hookFromMapping",
+                    "name": "hooksFromMapping",
                     "access": "",
                     "virtual": false,
-                    "description": "Hook from mapping",
+                    "description": "Register hooks from mapping",
                     "parameters": [
                         {
                             "name": "HookMapping",
-                            "type": "",
+                            "type": "Object",
                             "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "HookMapping",
-                            "type": "Object.<string, function()>",
-                            "description": "Resource name and hook creators",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -336,6 +352,23 @@
                             "name": "ResourceMapping",
                             "type": "Object.<string, function()>",
                             "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "pluginFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register plugins from mapping",
+                    "parameters": [
+                        {
+                            "name": "PluginMapping",
+                            "type": "Object",
+                            "description": "",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -398,23 +431,15 @@
                     }
                 },
                 {
-                    "name": "hookFromMapping",
+                    "name": "hooksFromMapping",
                     "access": "",
                     "virtual": false,
-                    "description": "Hook from mapping",
+                    "description": "Register hooks from mapping",
                     "parameters": [
                         {
                             "name": "HookMapping",
-                            "type": "",
+                            "type": "Object",
                             "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "HookMapping",
-                            "type": "Object.<string, function()>",
-                            "description": "Resource name and hook creators",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -461,6 +486,23 @@
                             "name": "ResourceMapping",
                             "type": "Object.<string, function()>",
                             "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "pluginFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register plugins from mapping",
+                    "parameters": [
+                        {
+                            "name": "PluginMapping",
+                            "type": "Object",
+                            "description": "",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -613,6 +655,30 @@
                         "default": "",
                         "optional": true,
                         "nullable": ""
+                    },
+                    {
+                        "name": "config.plugins",
+                        "type": "object",
+                        "description": "Database plugin creators",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.hooks",
+                        "type": "object",
+                        "description": "Database hook creators",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
+                    },
+                    {
+                        "name": "config.resources",
+                        "type": "object",
+                        "description": "Database resource classes",
+                        "default": "",
+                        "optional": true,
+                        "nullable": ""
                     }
                 ],
                 "examples": []
@@ -640,23 +706,15 @@
                     }
                 },
                 {
-                    "name": "hookFromMapping",
+                    "name": "hooksFromMapping",
                     "access": "",
                     "virtual": false,
-                    "description": "Hook from mapping",
+                    "description": "Register hooks from mapping",
                     "parameters": [
                         {
                             "name": "HookMapping",
-                            "type": "",
+                            "type": "Object",
                             "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "HookMapping",
-                            "type": "Object.<string, function()>",
-                            "description": "Resource name and hook creators",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -703,6 +761,23 @@
                             "name": "ResourceMapping",
                             "type": "Object.<string, function()>",
                             "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "pluginFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register plugins from mapping",
+                    "parameters": [
+                        {
+                            "name": "PluginMapping",
+                            "type": "Object",
+                            "description": "",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -765,23 +840,15 @@
                     }
                 },
                 {
-                    "name": "hookFromMapping",
+                    "name": "hooksFromMapping",
                     "access": "",
                     "virtual": false,
-                    "description": "Hook from mapping",
+                    "description": "Register hooks from mapping",
                     "parameters": [
                         {
                             "name": "HookMapping",
-                            "type": "",
+                            "type": "Object",
                             "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "HookMapping",
-                            "type": "Object.<string, function()>",
-                            "description": "Resource name and hook creators",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -828,6 +895,23 @@
                             "name": "ResourceMapping",
                             "type": "Object.<string, function()>",
                             "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "pluginFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register plugins from mapping",
+                    "parameters": [
+                        {
+                            "name": "PluginMapping",
+                            "type": "Object",
+                            "description": "",
                             "default": "",
                             "optional": "",
                             "nullable": ""
