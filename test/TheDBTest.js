@@ -32,6 +32,9 @@ describe('the-db', function () {
             ok(created)
           }
         })
+      },
+      plugins: {
+        foo: (db) => () => 'foo'
       }
     })
 
@@ -120,6 +123,8 @@ describe('the-db', function () {
     await db.import(dataDir)
 
     await asleep(300)
+
+    equal(db.plugins.foo(), 'foo')
 
     await db.drop()
     await db.close()
