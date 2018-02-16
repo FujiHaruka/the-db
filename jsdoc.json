@@ -252,23 +252,15 @@
             },
             "functions": [
                 {
-                    "name": "load",
+                    "name": "hasResource",
                     "access": "",
                     "virtual": false,
-                    "description": "Register resource form Resource Class",
+                    "description": "Check if resource exists",
                     "parameters": [
-                        {
-                            "name": "ResourceClass",
-                            "type": "function",
-                            "description": "Resource class to register",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
                         {
                             "name": "resourceName",
                             "type": "string",
-                            "description": "Name of resource",
+                            "description": "",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -276,26 +268,9 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "ClayResource",
-                        "description": "Loaded resource class"
+                        "type": "boolean",
+                        "description": ""
                     }
-                },
-                {
-                    "name": "loadFromMapping",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Load resources from mapping object",
-                    "parameters": [
-                        {
-                            "name": "ResourceMapping",
-                            "type": "Object.<string, function()>",
-                            "description": "Resource name and class",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": []
                 },
                 {
                     "name": "hookFromMapping",
@@ -321,60 +296,6 @@
                         }
                     ],
                     "examples": []
-                },
-                {
-                    "name": "hasResource",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Check if resource exists",
-                    "parameters": [
-                        {
-                            "name": "resourceName",
-                            "type": "string",
-                            "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "boolean",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "updateVersion",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Update database migration version",
-                    "parameters": [
-                        {
-                            "name": "version",
-                            "type": "string",
-                            "description": "Version string",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.boolean",
-                        "description": "Success or not"
-                    }
-                },
-                {
-                    "name": "unref",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Aut close before exit",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "TheDB",
-                        "description": "this"
-                    }
                 },
                 {
                     "name": "load",
@@ -423,6 +344,60 @@
                     "examples": []
                 },
                 {
+                    "name": "unref",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Aut close before exit",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "TheDB",
+                        "description": "this"
+                    }
+                },
+                {
+                    "name": "updateVersion",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Update database migration version",
+                    "parameters": [
+                        {
+                            "name": "version",
+                            "type": "string",
+                            "description": "Version string",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.boolean",
+                        "description": "Success or not"
+                    }
+                },
+                {
+                    "name": "hasResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if resource exists",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "boolean",
+                        "description": ""
+                    }
+                },
+                {
                     "name": "hookFromMapping",
                     "access": "",
                     "virtual": false,
@@ -448,15 +423,23 @@
                     "examples": []
                 },
                 {
-                    "name": "hasResource",
+                    "name": "load",
                     "access": "",
                     "virtual": false,
-                    "description": "Check if resource exists",
+                    "description": "Register resource form Resource Class",
                     "parameters": [
+                        {
+                            "name": "ResourceClass",
+                            "type": "function",
+                            "description": "Resource class to register",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
                         {
                             "name": "resourceName",
                             "type": "string",
-                            "description": "",
+                            "description": "Name of resource",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -464,8 +447,37 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "boolean",
-                        "description": ""
+                        "type": "ClayResource",
+                        "description": "Loaded resource class"
+                    }
+                },
+                {
+                    "name": "loadFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load resources from mapping object",
+                    "parameters": [
+                        {
+                            "name": "ResourceMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "unref",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Aut close before exit",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "TheDB",
+                        "description": "this"
                     }
                 },
                 {
@@ -487,18 +499,6 @@
                     "returns": {
                         "type": "Promise.boolean",
                         "description": "Success or not"
-                    }
-                },
-                {
-                    "name": "unref",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Aut close before exit",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "TheDB",
-                        "description": "this"
                     }
                 }
             ]
@@ -619,23 +619,15 @@
             },
             "functions": [
                 {
-                    "name": "load",
+                    "name": "hasResource",
                     "access": "",
                     "virtual": false,
-                    "description": "Register resource form Resource Class",
+                    "description": "Check if resource exists",
                     "parameters": [
-                        {
-                            "name": "ResourceClass",
-                            "type": "function",
-                            "description": "Resource class to register",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
                         {
                             "name": "resourceName",
                             "type": "string",
-                            "description": "Name of resource",
+                            "description": "",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -643,26 +635,9 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "ClayResource",
-                        "description": "Loaded resource class"
+                        "type": "boolean",
+                        "description": ""
                     }
-                },
-                {
-                    "name": "loadFromMapping",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Load resources from mapping object",
-                    "parameters": [
-                        {
-                            "name": "ResourceMapping",
-                            "type": "Object.<string, function()>",
-                            "description": "Resource name and class",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": []
                 },
                 {
                     "name": "hookFromMapping",
@@ -688,60 +663,6 @@
                         }
                     ],
                     "examples": []
-                },
-                {
-                    "name": "hasResource",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Check if resource exists",
-                    "parameters": [
-                        {
-                            "name": "resourceName",
-                            "type": "string",
-                            "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "boolean",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "updateVersion",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Update database migration version",
-                    "parameters": [
-                        {
-                            "name": "version",
-                            "type": "string",
-                            "description": "Version string",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.boolean",
-                        "description": "Success or not"
-                    }
-                },
-                {
-                    "name": "unref",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Aut close before exit",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "TheDB",
-                        "description": "this"
-                    }
                 },
                 {
                     "name": "load",
@@ -790,6 +711,60 @@
                     "examples": []
                 },
                 {
+                    "name": "unref",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Aut close before exit",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "TheDB",
+                        "description": "this"
+                    }
+                },
+                {
+                    "name": "updateVersion",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Update database migration version",
+                    "parameters": [
+                        {
+                            "name": "version",
+                            "type": "string",
+                            "description": "Version string",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.boolean",
+                        "description": "Success or not"
+                    }
+                },
+                {
+                    "name": "hasResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if resource exists",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "boolean",
+                        "description": ""
+                    }
+                },
+                {
                     "name": "hookFromMapping",
                     "access": "",
                     "virtual": false,
@@ -815,15 +790,23 @@
                     "examples": []
                 },
                 {
-                    "name": "hasResource",
+                    "name": "load",
                     "access": "",
                     "virtual": false,
-                    "description": "Check if resource exists",
+                    "description": "Register resource form Resource Class",
                     "parameters": [
+                        {
+                            "name": "ResourceClass",
+                            "type": "function",
+                            "description": "Resource class to register",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
                         {
                             "name": "resourceName",
                             "type": "string",
-                            "description": "",
+                            "description": "Name of resource",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -831,8 +814,37 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "boolean",
-                        "description": ""
+                        "type": "ClayResource",
+                        "description": "Loaded resource class"
+                    }
+                },
+                {
+                    "name": "loadFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load resources from mapping object",
+                    "parameters": [
+                        {
+                            "name": "ResourceMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "unref",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Aut close before exit",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "TheDB",
+                        "description": "this"
                     }
                 },
                 {
@@ -854,18 +866,6 @@
                     "returns": {
                         "type": "Promise.boolean",
                         "description": "Success or not"
-                    }
-                },
-                {
-                    "name": "unref",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Aut close before exit",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "TheDB",
-                        "description": "this"
                     }
                 }
             ]
