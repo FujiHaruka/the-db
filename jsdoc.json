@@ -276,6 +276,27 @@
             },
             "functions": [
                 {
+                    "name": "getResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get resource with name",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "TheResource",
+                        "description": ""
+                    }
+                },
+                {
                     "name": "hasResource",
                     "access": "",
                     "virtual": false,
@@ -407,6 +428,27 @@
                     "returns": {
                         "type": "Promise.boolean",
                         "description": "Success or not"
+                    }
+                },
+                {
+                    "name": "getResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get resource with name",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "TheResource",
+                        "description": ""
                     }
                 },
                 {
@@ -685,6 +727,27 @@
             },
             "functions": [
                 {
+                    "name": "getResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get resource with name",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "TheResource",
+                        "description": ""
+                    }
+                },
+                {
                     "name": "hasResource",
                     "access": "",
                     "virtual": false,
@@ -816,6 +879,27 @@
                     "returns": {
                         "type": "Promise.boolean",
                         "description": "Success or not"
+                    }
+                },
+                {
+                    "name": "getResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get resource with name",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "TheResource",
+                        "description": ""
                     }
                 },
                 {
