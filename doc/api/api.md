@@ -1,4 +1,4 @@
-# the-db@9.1.0
+# the-db@9.1.1
 
 DB for the-framework
 
@@ -7,15 +7,17 @@ DB for the-framework
 + [`TheDB`](#the-db-classes) Class
   + [new TheDB(config)](#the-db-classes-the-d-b-constructor)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
-  + [b.hookFromMapping(HookMapping, HookMapping)](#the-db-classes-the-d-b-hookFromMapping)
+  + [b.hooksFromMapping(HookMapping)](#the-db-classes-the-d-b-hooksFromMapping)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.loadFromMapping(ResourceMapping)](#the-db-classes-the-d-b-loadFromMapping)
+  + [b.pluginFromMapping(PluginMapping)](#the-db-classes-the-d-b-pluginFromMapping)
   + [b.unref()](#the-db-classes-the-d-b-unref)
   + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
-  + [b.hookFromMapping(HookMapping, HookMapping)](#the-db-classes-the-d-b-hookFromMapping)
+  + [b.hooksFromMapping(HookMapping)](#the-db-classes-the-d-b-hooksFromMapping)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.loadFromMapping(ResourceMapping)](#the-db-classes-the-d-b-loadFromMapping)
+  + [b.pluginFromMapping(PluginMapping)](#the-db-classes-the-d-b-pluginFromMapping)
   + [b.unref()](#the-db-classes-the-d-b-unref)
   + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
 
@@ -59,6 +61,9 @@ Constructor of TheDB class
 | config.password | string | Database password |
 | config.host | string | Database password |
 | config.port | string | Database password |
+| config.plugins | object | Database plugin creators |
+| config.hooks | object | Database hook creators |
+| config.resources | object | Database resource classes |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>
@@ -72,16 +77,15 @@ Check if resource exists
 | resourceName | string |  |
 
 
-<a class='md-heading-link' name="the-db-classes-the-d-b-hookFromMapping" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-hooksFromMapping" ></a>
 
-### b.hookFromMapping(HookMapping, HookMapping)
+### b.hooksFromMapping(HookMapping)
 
-Hook from mapping
+Register hooks from mapping
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| HookMapping |  |  |
-| HookMapping | Object.&lt;string, function()&gt; | Resource name and hook creators |
+| HookMapping | Object |  |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
@@ -105,6 +109,17 @@ Load resources from mapping object
 | Param | Type | Description |
 | ----- | --- | -------- |
 | ResourceMapping | Object.&lt;string, function()&gt; | Resource name and class |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-pluginFromMapping" ></a>
+
+### b.pluginFromMapping(PluginMapping)
+
+Register plugins from mapping
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| PluginMapping | Object |  |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-unref" ></a>
@@ -135,16 +150,15 @@ Check if resource exists
 | resourceName | string |  |
 
 
-<a class='md-heading-link' name="the-db-classes-the-d-b-hookFromMapping" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-hooksFromMapping" ></a>
 
-### b.hookFromMapping(HookMapping, HookMapping)
+### b.hooksFromMapping(HookMapping)
 
-Hook from mapping
+Register hooks from mapping
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| HookMapping |  |  |
-| HookMapping | Object.&lt;string, function()&gt; | Resource name and hook creators |
+| HookMapping | Object |  |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
@@ -168,6 +182,17 @@ Load resources from mapping object
 | Param | Type | Description |
 | ----- | --- | -------- |
 | ResourceMapping | Object.&lt;string, function()&gt; | Resource name and class |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-pluginFromMapping" ></a>
+
+### b.pluginFromMapping(PluginMapping)
+
+Register plugins from mapping
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| PluginMapping | Object |  |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-unref" ></a>
