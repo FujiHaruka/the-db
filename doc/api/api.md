@@ -1,4 +1,4 @@
-# the-db@9.1.3
+# the-db@9.1.4
 
 DB for the-framework
 
@@ -6,6 +6,7 @@ DB for the-framework
   + [create(args)](#the-db-function-create)
 + [`TheDB`](#the-db-classes) Class
   + [new TheDB(config)](#the-db-classes-the-d-b-constructor)
+  + [b.getResource(resourceName)](#the-db-classes-the-d-b-getResource)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
   + [b.hooksFromMapping(HookMapping)](#the-db-classes-the-d-b-hooksFromMapping)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
@@ -13,6 +14,7 @@ DB for the-framework
   + [b.pluginFromMapping(PluginMapping)](#the-db-classes-the-d-b-pluginFromMapping)
   + [b.unref()](#the-db-classes-the-d-b-unref)
   + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
+  + [b.getResource(resourceName)](#the-db-classes-the-d-b-getResource)
   + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
   + [b.hooksFromMapping(HookMapping)](#the-db-classes-the-d-b-hooksFromMapping)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
@@ -64,6 +66,17 @@ Constructor of TheDB class
 | config.plugins | object | Database plugin creators |
 | config.hooks | object | Database hook creators |
 | config.resources | object | Database resource classes |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-getResource" ></a>
+
+### b.getResource(resourceName) -> `TheResource`
+
+Get resource with name
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| resourceName | string |  |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>
@@ -137,6 +150,17 @@ Update database migration version
 | Param | Type | Description |
 | ----- | --- | -------- |
 | version | string | Version string |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-getResource" ></a>
+
+### b.getResource(resourceName) -> `TheResource`
+
+Get resource with name
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| resourceName | string |  |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>
