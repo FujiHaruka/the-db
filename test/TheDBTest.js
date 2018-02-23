@@ -260,6 +260,50 @@ describe('the-db', function () {
     await db.drop()
     await db.close()
   })
+
+  it('Invalidate mix', async () => {
+    const env = {
+      dialect: 'memory',
+      refreshInterval: 10,
+    }
+    const db = new TheDB({env})
+
+    class ArticleResource extends TheResource {
+      async refresh (entity) {
+        const {db: {resources: {Star}}} = this
+        await entity.update({
+          starCount: await Star.count({target: entity})
+        })
+      }
+
+      static get policy () {
+        return {
+          starCount: {type: 'NUMBER', default: () => 0}
+        }
+      }
+    }
+
+    class StarResource extends TheResource {
+      static get policy () {
+        return {
+          target: {type: 'ENTITY'}
+        }
+      }
+    }
+
+    const Article = db.load(ArticleResource, 'Article')
+    const Star = db.load(StarResource, 'Star')
+
+    const article01 = await Article.create({name: 'a01'})
+    await Star.create({target: article01})
+
+    await db.invalidate(article01.toRef())
+
+    await asleep(100)
+    await article01.sync()
+    equal(article01.starCount, 1)
+
+  })
 })
 
 /* global describe, before, after, it */
