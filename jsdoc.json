@@ -143,11 +143,45 @@
             "access": "",
             "virtual": false,
             "description": "Add export/import methods",
-            "parameters": [],
-            "examples": []
+            "parameters": [
+                {
+                    "name": null,
+                    "type": "function",
+                    "description": "",
+                    "default": "",
+                    "optional": "",
+                    "nullable": ""
+                }
+            ],
+            "examples": [],
+            "returns": {
+                "type": "function",
+                "description": ""
+            }
         },
         {
             "name": "migrateMix",
+            "access": "",
+            "virtual": false,
+            "description": "Add migrate methods",
+            "parameters": [
+                {
+                    "name": null,
+                    "type": "function",
+                    "description": "",
+                    "default": "",
+                    "optional": "",
+                    "nullable": ""
+                }
+            ],
+            "examples": [],
+            "returns": {
+                "type": "function",
+                "description": ""
+            }
+        },
+        {
+            "name": "resourceMix",
             "access": "",
             "virtual": false,
             "description": "",
@@ -167,7 +201,12 @@
         {
             "name": "TheDB",
             "description": "",
-            "extends": [],
+            "extends": [
+                "ResourceMixed",
+                "ExportImportMixed",
+                "MigrateMixed",
+                "CliMixed"
+            ],
             "access": "",
             "virtual": false,
             "fires": "",
@@ -276,15 +315,40 @@
             },
             "functions": [
                 {
-                    "name": "getResource",
+                    "name": "hooksFromMapping",
                     "access": "",
                     "virtual": false,
-                    "description": "Get resource with name",
+                    "description": "Register hooks from mapping",
                     "parameters": [
+                        {
+                            "name": "HookMapping",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "load",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register resource form Resource Class",
+                    "parameters": [
+                        {
+                            "name": "ResourceClass",
+                            "type": "function",
+                            "description": "Resource class to register",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
                         {
                             "name": "resourceName",
                             "type": "string",
-                            "description": "",
+                            "description": "Name of resource",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -292,20 +356,78 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "TheResource",
+                        "type": "ClayResource",
+                        "description": "Loaded resource class"
+                    }
+                },
+                {
+                    "name": "loadFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load resources from mapping object",
+                    "parameters": [
+                        {
+                            "name": "ResourceMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "pluginFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register plugins from mapping",
+                    "parameters": [
+                        {
+                            "name": "PluginMapping",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "unref",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Aut close before exit",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "TheDB",
+                        "description": "this"
+                    }
+                },
+                {
+                    "name": "drop",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Drop database",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
                         "description": ""
                     }
                 },
                 {
-                    "name": "hasResource",
+                    "name": "updateVersion",
                     "access": "",
                     "virtual": false,
-                    "description": "Check if resource exists",
+                    "description": "Update database migration version",
                     "parameters": [
                         {
-                            "name": "resourceName",
+                            "name": "version",
                             "type": "string",
-                            "description": "",
+                            "description": "Version string",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -313,8 +435,8 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "boolean",
-                        "description": ""
+                        "type": "Promise.boolean",
+                        "description": "Success or not"
                     }
                 },
                 {
@@ -410,6 +532,18 @@
                     }
                 },
                 {
+                    "name": "drop",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Drop database",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
                     "name": "updateVersion",
                     "access": "",
                     "virtual": false,
@@ -429,6 +563,23 @@
                         "type": "Promise.boolean",
                         "description": "Success or not"
                     }
+                },
+                {
+                    "name": "assertResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if resource exists",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
                 },
                 {
                     "name": "getResource",
@@ -473,77 +624,116 @@
                     }
                 },
                 {
-                    "name": "hooksFromMapping",
+                    "name": "migrate",
                     "access": "",
                     "virtual": false,
-                    "description": "Register hooks from mapping",
+                    "description": "Run database migration",
                     "parameters": [
                         {
-                            "name": "HookMapping",
-                            "type": "Object",
-                            "description": "",
+                            "name": "handlers",
+                            "type": "Object.<string, function()>",
+                            "description": "Migration handler for each versions",
                             "default": "",
                             "optional": "",
                             "nullable": ""
                         }
                     ],
-                    "examples": []
-                },
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<?Object>",
+                        "description": "Migration result"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "CliMix",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "CliMix",
+                "description": "",
+                "parameters": [],
+                "examples": []
+            }
+        },
+        {
+            "name": "ExportImportMixed",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "ExportImportMixed",
+                "description": "",
+                "parameters": [],
+                "examples": []
+            }
+        },
+        {
+            "name": "MigrateMixed",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "MigrateMixed",
+                "description": "",
+                "parameters": [],
+                "examples": []
+            },
+            "functions": [
                 {
-                    "name": "load",
+                    "name": "migrate",
                     "access": "",
                     "virtual": false,
-                    "description": "Register resource form Resource Class",
+                    "description": "Run database migration",
                     "parameters": [
                         {
-                            "name": "ResourceClass",
-                            "type": "function",
-                            "description": "Resource class to register",
+                            "name": "handlers",
+                            "type": "Object.<string, function()>",
+                            "description": "Migration handler for each versions",
                             "default": "",
                             "optional": "",
                             "nullable": ""
-                        },
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<?Object>",
+                        "description": "Migration result"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ResourceMixed",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "ResourceMixed",
+                "description": "",
+                "parameters": [],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "assertResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if resource exists",
+                    "parameters": [
                         {
                             "name": "resourceName",
                             "type": "string",
-                            "description": "Name of resource",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "ClayResource",
-                        "description": "Loaded resource class"
-                    }
-                },
-                {
-                    "name": "loadFromMapping",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Load resources from mapping object",
-                    "parameters": [
-                        {
-                            "name": "ResourceMapping",
-                            "type": "Object.<string, function()>",
-                            "description": "Resource name and class",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": []
-                },
-                {
-                    "name": "pluginFromMapping",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Register plugins from mapping",
-                    "parameters": [
-                        {
-                            "name": "PluginMapping",
-                            "type": "Object",
                             "description": "",
                             "default": "",
                             "optional": "",
@@ -553,27 +743,15 @@
                     "examples": []
                 },
                 {
-                    "name": "unref",
+                    "name": "getResource",
                     "access": "",
                     "virtual": false,
-                    "description": "Aut close before exit",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "TheDB",
-                        "description": "this"
-                    }
-                },
-                {
-                    "name": "updateVersion",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Update database migration version",
+                    "description": "Get resource with name",
                     "parameters": [
                         {
-                            "name": "version",
+                            "name": "resourceName",
                             "type": "string",
-                            "description": "Version string",
+                            "description": "",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -581,8 +759,29 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "Promise.boolean",
-                        "description": "Success or not"
+                        "type": "TheResource",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "hasResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if resource exists",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "boolean",
+                        "description": ""
                     }
                 }
             ]
@@ -618,7 +817,12 @@
         {
             "name": "TheDB",
             "description": "",
-            "extends": [],
+            "extends": [
+                "ResourceMixed",
+                "ExportImportMixed",
+                "MigrateMixed",
+                "CliMixed"
+            ],
             "access": "",
             "virtual": false,
             "fires": "",
@@ -727,15 +931,40 @@
             },
             "functions": [
                 {
-                    "name": "getResource",
+                    "name": "hooksFromMapping",
                     "access": "",
                     "virtual": false,
-                    "description": "Get resource with name",
+                    "description": "Register hooks from mapping",
                     "parameters": [
+                        {
+                            "name": "HookMapping",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "load",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register resource form Resource Class",
+                    "parameters": [
+                        {
+                            "name": "ResourceClass",
+                            "type": "function",
+                            "description": "Resource class to register",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
                         {
                             "name": "resourceName",
                             "type": "string",
-                            "description": "",
+                            "description": "Name of resource",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -743,20 +972,78 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "TheResource",
+                        "type": "ClayResource",
+                        "description": "Loaded resource class"
+                    }
+                },
+                {
+                    "name": "loadFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load resources from mapping object",
+                    "parameters": [
+                        {
+                            "name": "ResourceMapping",
+                            "type": "Object.<string, function()>",
+                            "description": "Resource name and class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "pluginFromMapping",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Register plugins from mapping",
+                    "parameters": [
+                        {
+                            "name": "PluginMapping",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "unref",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Aut close before exit",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "TheDB",
+                        "description": "this"
+                    }
+                },
+                {
+                    "name": "drop",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Drop database",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
                         "description": ""
                     }
                 },
                 {
-                    "name": "hasResource",
+                    "name": "updateVersion",
                     "access": "",
                     "virtual": false,
-                    "description": "Check if resource exists",
+                    "description": "Update database migration version",
                     "parameters": [
                         {
-                            "name": "resourceName",
+                            "name": "version",
                             "type": "string",
-                            "description": "",
+                            "description": "Version string",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -764,8 +1051,8 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "boolean",
-                        "description": ""
+                        "type": "Promise.boolean",
+                        "description": "Success or not"
                     }
                 },
                 {
@@ -861,6 +1148,18 @@
                     }
                 },
                 {
+                    "name": "drop",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Drop database",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
                     "name": "updateVersion",
                     "access": "",
                     "virtual": false,
@@ -880,6 +1179,23 @@
                         "type": "Promise.boolean",
                         "description": "Success or not"
                     }
+                },
+                {
+                    "name": "assertResource",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if resource exists",
+                    "parameters": [
+                        {
+                            "name": "resourceName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
                 },
                 {
                     "name": "getResource",
@@ -924,107 +1240,15 @@
                     }
                 },
                 {
-                    "name": "hooksFromMapping",
+                    "name": "migrate",
                     "access": "",
                     "virtual": false,
-                    "description": "Register hooks from mapping",
+                    "description": "Run database migration",
                     "parameters": [
                         {
-                            "name": "HookMapping",
-                            "type": "Object",
-                            "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": []
-                },
-                {
-                    "name": "load",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Register resource form Resource Class",
-                    "parameters": [
-                        {
-                            "name": "ResourceClass",
-                            "type": "function",
-                            "description": "Resource class to register",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "resourceName",
-                            "type": "string",
-                            "description": "Name of resource",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "ClayResource",
-                        "description": "Loaded resource class"
-                    }
-                },
-                {
-                    "name": "loadFromMapping",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Load resources from mapping object",
-                    "parameters": [
-                        {
-                            "name": "ResourceMapping",
+                            "name": "handlers",
                             "type": "Object.<string, function()>",
-                            "description": "Resource name and class",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": []
-                },
-                {
-                    "name": "pluginFromMapping",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Register plugins from mapping",
-                    "parameters": [
-                        {
-                            "name": "PluginMapping",
-                            "type": "Object",
-                            "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": []
-                },
-                {
-                    "name": "unref",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Aut close before exit",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "TheDB",
-                        "description": "this"
-                    }
-                },
-                {
-                    "name": "updateVersion",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Update database migration version",
-                    "parameters": [
-                        {
-                            "name": "version",
-                            "type": "string",
-                            "description": "Version string",
+                            "description": "Migration handler for each versions",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -1032,8 +1256,8 @@
                     ],
                     "examples": [],
                     "returns": {
-                        "type": "Promise.boolean",
-                        "description": "Success or not"
+                        "type": "Promise.<?Object>",
+                        "description": "Migration result"
                     }
                 }
             ]

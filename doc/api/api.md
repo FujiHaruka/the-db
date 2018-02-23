@@ -6,22 +6,24 @@ DB for the-framework
   + [create(args)](#the-db-function-create)
 + [`TheDB`](#the-db-classes) Class
   + [new TheDB(config)](#the-db-classes-the-d-b-constructor)
-  + [b.getResource(resourceName)](#the-db-classes-the-d-b-getResource)
-  + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
   + [b.hooksFromMapping(HookMapping)](#the-db-classes-the-d-b-hooksFromMapping)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.loadFromMapping(ResourceMapping)](#the-db-classes-the-d-b-loadFromMapping)
   + [b.pluginFromMapping(PluginMapping)](#the-db-classes-the-d-b-pluginFromMapping)
   + [b.unref()](#the-db-classes-the-d-b-unref)
+  + [b.drop()](#the-db-classes-the-d-b-drop)
   + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
-  + [b.getResource(resourceName)](#the-db-classes-the-d-b-getResource)
-  + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
   + [b.hooksFromMapping(HookMapping)](#the-db-classes-the-d-b-hooksFromMapping)
   + [b.load(ResourceClass, resourceName)](#the-db-classes-the-d-b-load)
   + [b.loadFromMapping(ResourceMapping)](#the-db-classes-the-d-b-loadFromMapping)
   + [b.pluginFromMapping(PluginMapping)](#the-db-classes-the-d-b-pluginFromMapping)
   + [b.unref()](#the-db-classes-the-d-b-unref)
+  + [b.drop()](#the-db-classes-the-d-b-drop)
   + [b.updateVersion(version)](#the-db-classes-the-d-b-updateVersion)
+  + [b.assertResource(resourceName)](#the-db-classes-the-d-b-assertResource)
+  + [b.getResource(resourceName)](#the-db-classes-the-d-b-getResource)
+  + [b.hasResource(resourceName)](#the-db-classes-the-d-b-hasResource)
+  + [b.migrate(handlers)](#the-db-classes-the-d-b-migrate)
 
 ## Functions
 
@@ -43,6 +45,18 @@ Create a TheDB instance
 
 
 
+**Extends**: 
+
++ `ResourceMixed`
+
+
++ `ExportImportMixed`
+
+
++ `MigrateMixed`
+
+
++ `CliMixed`
 
 
 
@@ -68,26 +82,72 @@ Constructor of TheDB class
 | config.resources | object | Database resource classes |
 
 
-<a class='md-heading-link' name="the-db-classes-the-d-b-getResource" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-hooksFromMapping" ></a>
 
-### b.getResource(resourceName) -> `TheResource`
+### b.hooksFromMapping(HookMapping)
 
-Get resource with name
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| resourceName | string |  |
-
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-hasResource" ></a>
-
-### b.hasResource(resourceName) -> `boolean`
-
-Check if resource exists
+Register hooks from mapping
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| resourceName | string |  |
+| HookMapping | Object |  |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
+
+### b.load(ResourceClass, resourceName) -> `ClayResource`
+
+Register resource form Resource Class
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| ResourceClass | function | Resource class to register |
+| resourceName | string | Name of resource |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-loadFromMapping" ></a>
+
+### b.loadFromMapping(ResourceMapping)
+
+Load resources from mapping object
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| ResourceMapping | Object.&lt;string, function()&gt; | Resource name and class |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-pluginFromMapping" ></a>
+
+### b.pluginFromMapping(PluginMapping)
+
+Register plugins from mapping
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| PluginMapping | Object |  |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-unref" ></a>
+
+### b.unref() -> `TheDB`
+
+Aut close before exit
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-drop" ></a>
+
+### b.drop() -> `Promise.<void>`
+
+Drop database
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-updateVersion" ></a>
+
+### b.updateVersion(version) -> `Promise.boolean`
+
+Update database migration version
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| version | string | Version string |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-hooksFromMapping" ></a>
@@ -141,6 +201,12 @@ Register plugins from mapping
 
 Aut close before exit
 
+<a class='md-heading-link' name="the-db-classes-the-d-b-drop" ></a>
+
+### b.drop() -> `Promise.<void>`
+
+Drop database
+
 <a class='md-heading-link' name="the-db-classes-the-d-b-updateVersion" ></a>
 
 ### b.updateVersion(version) -> `Promise.boolean`
@@ -150,6 +216,17 @@ Update database migration version
 | Param | Type | Description |
 | ----- | --- | -------- |
 | version | string | Version string |
+
+
+<a class='md-heading-link' name="the-db-classes-the-d-b-assertResource" ></a>
+
+### b.assertResource(resourceName)
+
+Check if resource exists
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| resourceName | string |  |
 
 
 <a class='md-heading-link' name="the-db-classes-the-d-b-getResource" ></a>
@@ -174,66 +251,15 @@ Check if resource exists
 | resourceName | string |  |
 
 
-<a class='md-heading-link' name="the-db-classes-the-d-b-hooksFromMapping" ></a>
+<a class='md-heading-link' name="the-db-classes-the-d-b-migrate" ></a>
 
-### b.hooksFromMapping(HookMapping)
+### b.migrate(handlers) -> `Promise.<?Object>`
 
-Register hooks from mapping
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| HookMapping | Object |  |
-
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-load" ></a>
-
-### b.load(ResourceClass, resourceName) -> `ClayResource`
-
-Register resource form Resource Class
+Run database migration
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| ResourceClass | function | Resource class to register |
-| resourceName | string | Name of resource |
-
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-loadFromMapping" ></a>
-
-### b.loadFromMapping(ResourceMapping)
-
-Load resources from mapping object
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| ResourceMapping | Object.&lt;string, function()&gt; | Resource name and class |
-
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-pluginFromMapping" ></a>
-
-### b.pluginFromMapping(PluginMapping)
-
-Register plugins from mapping
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| PluginMapping | Object |  |
-
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-unref" ></a>
-
-### b.unref() -> `TheDB`
-
-Aut close before exit
-
-<a class='md-heading-link' name="the-db-classes-the-d-b-updateVersion" ></a>
-
-### b.updateVersion(version) -> `Promise.boolean`
-
-Update database migration version
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| version | string | Version string |
+| handlers | Object.&lt;string, function()&gt; | Migration handler for each versions |
 
 
 
