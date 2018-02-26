@@ -181,6 +181,14 @@
             }
         },
         {
+            "name": "refreshMix",
+            "access": "",
+            "virtual": false,
+            "description": "",
+            "parameters": [],
+            "examples": []
+        },
+        {
             "name": "resourceMix",
             "access": "",
             "virtual": false,
@@ -205,6 +213,7 @@
                 "ResourceMixed",
                 "ExportImportMixed",
                 "MigrateMixed",
+                "RefreshMixed",
                 "CliMixed"
             ],
             "access": "",
@@ -419,6 +428,27 @@
                     }
                 },
                 {
+                    "name": "invalidate",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Invalidate entity",
+                    "parameters": [
+                        {
+                            "name": "entityRef",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
                     "name": "updateVersion",
                     "access": "",
                     "virtual": false,
@@ -537,6 +567,27 @@
                     "virtual": false,
                     "description": "Drop database",
                     "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "invalidate",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Invalidate entity",
+                    "parameters": [
+                        {
+                            "name": "entityRef",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
                     "examples": [],
                     "returns": {
                         "type": "Promise.<void>",
@@ -821,6 +872,7 @@
                 "ResourceMixed",
                 "ExportImportMixed",
                 "MigrateMixed",
+                "RefreshMixed",
                 "CliMixed"
             ],
             "access": "",
@@ -1035,6 +1087,27 @@
                     }
                 },
                 {
+                    "name": "invalidate",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Invalidate entity",
+                    "parameters": [
+                        {
+                            "name": "entityRef",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
                     "name": "updateVersion",
                     "access": "",
                     "virtual": false,
@@ -1153,6 +1226,27 @@
                     "virtual": false,
                     "description": "Drop database",
                     "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "invalidate",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Invalidate entity",
+                    "parameters": [
+                        {
+                            "name": "entityRef",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
                     "examples": [],
                     "returns": {
                         "type": "Promise.<void>",
