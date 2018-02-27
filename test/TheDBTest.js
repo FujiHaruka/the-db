@@ -304,6 +304,38 @@ describe('the-db', function () {
     equal(article01.starCount, 1)
 
   })
+
+  it('Cascade', async () => {
+    const env = {
+      dialect: 'memory',
+      refreshInterval: 10,
+    }
+
+    class AResource extends TheResource {
+      static get cascaded () {
+        return {
+          B: (b) => ({b})
+        }
+      }
+    }
+
+    class BResource extends TheResource {}
+
+    const db = new TheDB({
+      env,
+      resources: {A: AResource, B: BResource}
+    })
+    const {A, B} = db.resources
+    const b01 = await B.create({name: 'b01'})
+    const b02 = await B.create({name: 'b02'})
+    await A.create({b: b01})
+    await A.create({b: b02})
+    equal(await A.count(), 2)
+
+    await b01.destroy()
+    await asleep(100)
+    equal(await A.count(), 1)
+  })
 })
 
 /* global describe, before, after, it */

@@ -694,6 +694,23 @@
                         "type": "Promise.<?Object>",
                         "description": "Migration result"
                     }
+                },
+                {
+                    "name": "requestToRefresh",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Request to refresh entity",
+                    "parameters": [
+                        {
+                            "name": "entityRef",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
                 }
             ]
         },
@@ -1353,6 +1370,23 @@
                         "type": "Promise.<?Object>",
                         "description": "Migration result"
                     }
+                },
+                {
+                    "name": "requestToRefresh",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Request to refresh entity",
+                    "parameters": [
+                        {
+                            "name": "entityRef",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
                 }
             ]
         }
