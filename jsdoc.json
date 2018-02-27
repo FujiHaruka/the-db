@@ -131,6 +131,27 @@
             "examples": []
         },
         {
+            "name": "cascadeMix",
+            "access": "",
+            "virtual": false,
+            "description": "",
+            "parameters": [
+                {
+                    "name": "Class",
+                    "type": "function",
+                    "description": "",
+                    "default": "",
+                    "optional": "",
+                    "nullable": ""
+                }
+            ],
+            "examples": [],
+            "returns": {
+                "type": "function",
+                "description": "Mixed Class"
+            }
+        },
+        {
             "name": "cliMix",
             "access": "",
             "virtual": false,
@@ -185,8 +206,21 @@
             "access": "",
             "virtual": false,
             "description": "",
-            "parameters": [],
-            "examples": []
+            "parameters": [
+                {
+                    "name": "Class",
+                    "type": "function",
+                    "description": "",
+                    "default": "",
+                    "optional": "",
+                    "nullable": ""
+                }
+            ],
+            "examples": [],
+            "returns": {
+                "type": "function",
+                "description": "Mixed Class"
+            }
         },
         {
             "name": "resourceMix",
@@ -710,6 +744,31 @@
                             "nullable": ""
                         }
                     ],
+                    "examples": []
+                },
+                {
+                    "name": "startRefreshLoop",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Start refreshing loop",
+                    "parameters": [
+                        {
+                            "name": "interval",
+                            "type": "number",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "stopRefreshLoop",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Stop refreshing loop",
+                    "parameters": [],
                     "examples": []
                 }
             ]
@@ -1386,6 +1445,31 @@
                             "nullable": ""
                         }
                     ],
+                    "examples": []
+                },
+                {
+                    "name": "startRefreshLoop",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Start refreshing loop",
+                    "parameters": [
+                        {
+                            "name": "interval",
+                            "type": "number",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "stopRefreshLoop",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Stop refreshing loop",
+                    "parameters": [],
                     "examples": []
                 }
             ]
