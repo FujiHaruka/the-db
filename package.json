@@ -31,7 +31,7 @@
     "mkdirp": "^0.5.1",
     "msgpack5": "^4.0.1",
     "mysql2": "^1.5.2",
-    "sequelize": "^4.34.0",
+    "sequelize": "^4.35.0",
     "the-check": "^1.2.2",
     "the-db-util": "^1.1.0",
     "the-hash": "^1.0.3",
