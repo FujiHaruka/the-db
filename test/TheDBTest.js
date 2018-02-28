@@ -135,16 +135,14 @@ describe('the-db', function () {
       dialect: 'mysql',
       username: 'hoge',
       password: 'fuge',
-      database: 'abc'
+      database: 'the-db-test-abc'
     }
     const db = new TheDB({
       env
     })
 
     await db.setup()
-
-    await db.exec('SHOW TABLES;')
-
+    await db.exec('SHOW TABLES')
     await db.drop()
     await db.close()
   })
