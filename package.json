@@ -23,7 +23,7 @@
     "clay-driver-mysql": "^5.2.22",
     "clay-driver-sqlite": "^6.3.12",
     "clay-lump": "^4.4.2",
-    "clay-resource": "^5.5.4",
+    "clay-resource": "^5.5.5",
     "clay-resource-name": "^4.0.3",
     "clay-resource-ref": "^2.0.2",
     "debug": "^3.1.0",
