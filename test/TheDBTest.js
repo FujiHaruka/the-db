@@ -297,7 +297,7 @@ describe('the-db', function () {
 
     await db.invalidate(article01.toRef())
 
-    await asleep(100)
+    await db.waitToRefresh(article01.toRef())
     await article01.sync()
     equal(article01.starCount, 1)
 
