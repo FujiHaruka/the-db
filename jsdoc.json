@@ -770,6 +770,35 @@
                     "description": "Stop refreshing loop",
                     "parameters": [],
                     "examples": []
+                },
+                {
+                    "name": "waitToRefresh",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Wait until refresh",
+                    "parameters": [
+                        {
+                            "name": "entityRef",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "options",
+                            "type": "Object",
+                            "description": "Optional settings",
+                            "default": "{}",
+                            "optional": true,
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Boolean>",
+                        "description": "- Full filled"
+                    }
                 }
             ]
         },
@@ -1471,6 +1500,35 @@
                     "description": "Stop refreshing loop",
                     "parameters": [],
                     "examples": []
+                },
+                {
+                    "name": "waitToRefresh",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Wait until refresh",
+                    "parameters": [
+                        {
+                            "name": "entityRef",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "options",
+                            "type": "Object",
+                            "description": "Optional settings",
+                            "default": "{}",
+                            "optional": true,
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Boolean>",
+                        "description": "- Full filled"
+                    }
                 }
             ]
         }
