@@ -10,7 +10,7 @@ const { ok, equal } = require('assert')
 const {TheResource} = require('the-resource-base')
 
 describe('export-import-mix', function () {
-  this.timeout(10000)
+  this.timeout(20000)
   let db
 
   before(async () => {
@@ -34,7 +34,6 @@ describe('export-import-mix', function () {
 
   after(async () => {
     await db.drop()
-    await db.close()
   })
 
   it('Do test', async () => {
