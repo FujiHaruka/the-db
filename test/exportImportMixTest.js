@@ -5,7 +5,6 @@
 'use strict'
 
 const TheDB = require('../lib/TheDB')
-// const exportImportMix = require('../lib/mixins/exportImportMix')
 const { ok, equal } = require('assert')
 const {TheResource} = require('the-resource-base')
 
